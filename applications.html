@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Applications</title>
+        <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Emoji-Parser/version/1.0.0/dist/emoji_parser.min.js"></script>
+        <link href="{% static 'css/app-card.css' %}" rel="stylesheet">
+        <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+        <style type="text/css">html,body,section{width: 100%; height: 100%;}*{font-family: "Consolas", Monospace, monospace;}</style>
+    </head>
+    <body>
+        <section class="app-container">
+            {% for template in templates %}
+                <div class="box">
+                <span></span>
+                <h2 class="index">{{ template.index }}</h2>
+                  <div class="content">
+                      {% if template.image %}
+                          <img src="{{ template.image }}" alt>
+                      {% endif %}
+                      <h2>{{ template.name }}</h2>
+                      <p>{{ template.profile }}</p>
+                      <a class="start" href="{{ template.path }}">Start!</a>
+                      <hr>
+                      <p class="author">author: {{ template.author }}</p>
+                      {% if template.github %}
+                          <a href="{{ template.github }}" target="_blank" class="github"><i class="fa fa-github"></i></a>
+                      {% endif %}
+                  </div>
+                </div>
+            {% endfor %}
+        </section>
+    </body>
+</html>
