@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>注册账户</title>
-	<link rel="shortcut icon" href="{% static 'images/register.png' %}" type="image/x-icon" />
-<!-- <script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8"></script> -->
-<script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
-<script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
-<script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
-
-<script type="text/javascript">
+<script setup>
 	$().ready(function() {
 	$("#loginform").validate({
 	    rules: {
@@ -51,15 +38,8 @@
 	)})
 
 </script>
-<style>
-    .error{
-        color:red;
-    }
-    *{font-family:"Consolas",Monospace;}
-</style>
-</head>
-
-<body>
+<template>
+<main>
     <section class="register-section">
         <!-- 背景颜色 -->
         <div class="color"></div>
@@ -78,10 +58,10 @@
                     <div class="title-div"><h2>Register</h2></div>
                     <form id = "loginform" action="/register/" method="post">
                         {% csrf_token %}
-                        <div class="inputBox"><input type="text" placeholder="请输入3~12位账户名" name="username" id="username" value="{{ username|default:'' }}"></div>
-                        <div class="inputBox"><input type="password" placeholder="请输入6~14位密码" name="password" id="password" value="{{ password|default:'' }}"></div>
-                        <div class="inputBox"><input type="password" placeholder="再次输入密码" name="re_password" id="re_password" value="{{ re_password|default:'' }}"></div>
-                        <div class="error" align="center"><br>{{ err_code|default:"" }}</div>
+                        <div class="inputBox"><input type="text" placeholder="请输入3~12位账户名" name="username" id="username" value=""></div>
+                        <div class="inputBox"><input type="password" placeholder="请输入6~14位密码" name="password" id="password" value=""></div>
+                        <div class="inputBox"><input type="password" placeholder="再次输入密码" name="re_password" id="re_password" value=""></div>
+                        <div class="error" align="center"><br></div>
                         <div class="inputBox"><input type="submit" value="register" id="input1"></div>
                     </form>
                     <p class="forget">已有账户?<a href="/login/">点击登录</a></p>
@@ -91,5 +71,10 @@
             </div>
         </div>
     </section>
-</body>
-</html>
+</main>
+</template>
+<style scoped>
+.error{
+  color:red;
+}
+</style>

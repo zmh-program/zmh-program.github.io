@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About {{ name|default:"user" }}</title>
-    <link href="{% static 'css/media-flip.css' %}" rel="stylesheet">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
-    <link href="{% static 'css/profile-style.css' %}" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Emoji-Parser/version/1.0.0/dist/emoji_parser.min.js"></script>
-    <style>
-            *{font-family:"Consolas", Monospace, monospace;margin:0;padding:0;}
-            .username{font-size: 16pt;}
-    </style>
-</head>
+<template>
 <body style="background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);">
             <div class="circle" style="--x:0"></div>
             <div class="circle" style="--x:1"></div>
@@ -26,4 +13,8 @@
                   <span id="profileContent" class="profile-content">{{ profile|default:"" }}&nbsp;</span>
               </div>
 </body>
-</html>
+</template>
+<style scoped>
+*{font-family:"Consolas", Monospace, monospace;margin:0;padding:0;}
+.username{font-size: 16pt;}
+</style>

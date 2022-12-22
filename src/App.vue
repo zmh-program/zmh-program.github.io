@@ -1,0 +1,270 @@
+<script setup>
+import index from './components/index.vue'
+</script>
+<template>
+  <main data-spy="scroll" data-target=".main-nav">
+    <div class="message-window" id="message-window"></div>
+    <section id="section-banner">
+      <div class="section-container">
+        <div class="row">
+          <div class="banner-content  fadeInRight">
+            <h2 class="title">Hello, <br/><span>🎉 welcome to Zh-Website.</span></h2>
+            <div class="button-list">
+              <a href="/register/" class="glass-button btn btn-default">Sign up</a>
+              <a href="/login/" class="glass-button btn btn-default">Sign in</a>
+              <br>
+              <a href="https://zmh-program.site/" class="goto-user glass-button btn btn-default btn-success">
+                zmh-program.site
+                <i class="fa">&#xf0a9</i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="section-overview" class="section-padding glass-section glass-tools">
+      <div class="section-container" style="margin: auto 0; width: 100%;">
+        <div class="row">
+          <div class="service-wrapper">
+            <div class="service-inner fadeInLeft glass-box toolsCard">
+              <h3 class="glass-title">Function | Applications</h3>
+              <div class="service-box list">
+                <div class="imageBox"><img src="https://cdn-icons-png.flaticon.com/128/7579/7579853.png" alt></div>
+                <div class="content">
+                  <div class="rank"><small>#</small>1</div>
+                  <h4>User Token</h4>
+                  <p>JWT(Json Web Token)</p>
+                </div>
+              </div>
+              <div class="service-box list">
+                <div class="imageBox"><img src="https://cdn-icons-png.flaticon.com/128/1689/1689391.png" alt></div>
+                <div class="content">
+                  <div class="rank"><small>#</small>2</div>
+                  <h4>User Cookies</h4>
+                  <p>Remember the user-cookie for two months.</p>
+                </div>
+              </div>
+              <div class="service-box list">
+                <div class="imageBox"><img src="https://cdn-icons-png.flaticon.com/128/4132/4132870.png" alt></div>
+                <div class="content">
+                  <div class="rank"><small>#</small>3</div>
+                  <h4>IM Websocket</h4>
+                  <p>HTCP Websocket(django-dwebsocket + javascript transport)</p>
+                </div>
+              </div>
+              <div class="list application-list">
+                <div class="imageBox">
+                  <img src="https://cdn-icons-png.flaticon.com/128/3245/3245498.png" alt>
+                </div>
+                <div class="content">
+                  <h2 class="rank application-rank"><small>#</small>1</h2>
+                  <h4>RL Snake</h4>
+                  <p>snake by zmh</p>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="service-inner fadeInRight glass-box toolsCard">
+              <h3 class="glass-title">Language | Framework</h3>
+              <div class="list service-box">
+                <div class="imageBox"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968350.png" alt></div>
+                <div class="content">
+                  <div class="rank"><small>#</small>1</div>
+                  <h4>Python</h4>
+                  <p>Python Script</p>
+                  <a href="https://www.python.org/">about Python (python.org)</a>
+                </div>
+              </div>
+              <div class="list service-box">
+                <div class="imageBox"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968267.png" alt></div>
+                <div class="content">
+                  <div class="rank"><small>#</small>2</div>
+                  <h4>html5</h4>
+                  <p>HyperText Markup Language</p>
+                </div>
+              </div>
+              <div class="list service-box">
+                <div class="imageBox"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968242.png" alt></div>
+                <div class="content">
+                  <div class="rank"><small>#</small>3</div>
+                  <h4>css3</h4>
+                  <p>Cascading Style Sheets</p>
+                </div>
+              </div>
+              <div class="list service-box">
+                <div class="imageBox"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png" alt></div>
+                <div class="content">
+                  <div class="rank"><small>#</small>5</div>
+                  <h4>js</h4>
+                  <p>JavaScript</p>
+                </div>
+              </div>
+              <div class="list service-box">
+                <div class="imageBox"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968672.png" alt></div>
+                <div class="content">
+                  <div class="rank"><small>#</small>4</div>
+                  <h4>Bootstrap 3</h4>
+                  <p>Powerful, extensible, and feature-packed frontend toolkit.</p>
+                </div>
+              </div>
+              <div class="list service-box">
+                <div class="imageBox"><img src="https://cdn-icons-png.flaticon.com/128/37/37256.png" alt></div>
+                <div class="content">
+                  <div class="rank"><small>#</small>5</div>
+                  <h4>jQuery.js</h4>
+                  <p>A fast, small, and feature-rich JavaScript library.</p>
+                </div>
+              </div>
+            </div>
+            <div class="service-inner fadeInRight glass-box toolsCard">
+              <h3 class="glass-title">Website</h3>
+              <div class="list service-box">
+                <div class="imageBox"><img src="https://p5.ssl.qhimgs1.com/sdr/400__/t01a60bad0a2b714f2f.webp" alt></div>
+                <div class="content">
+                  <div class="rank"><small>#</small>1</div>
+                  <h4>Django</h4>
+                  <p>web framework</p>
+                  <a href="https://www.djangoproject.com/">about Django (djangoproject.com)</a>
+                </div>
+              </div>
+              <div class="list service-box">
+                <div class="imageBox"><img src="https://simpleui.72wo.com/_nuxt/img/logo.111a249.png" alt></div>
+                <div class="content">
+                  <div class="rank"><small>#</small>2</div>
+                  <h4>Django SimpleUi</h4>
+                  <p>Back office management</p>
+                  <a href="https://simpleui.72wo.com/simpleui/">about SimpleUi (simpleui.72wo.com)</a>
+                </div>
+              </div>
+              <div class="list service-box">
+                <div class="imageBox"><img src="https://redis.io/images/favicons/apple-touch-icon.png" alt></div>
+                <div class="content">
+                  <div class="rank"><small>#</small>3</div>
+                  <h4>Django Dwebsocket</h4>
+                  <p>Redis + Web Socket (ws)</p>
+                  <a href="https://github.com/duanhongyi/dwebsocket">about GitHub dwebsocket</a>
+                  <a href="https://redis.io/">about Redis (redis.io)</a>
+                </div>
+              </div>
+              <div class="list service-box">
+                <div class="imageBox"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968363.png" alt></div>
+                <div class="content">
+                  <div class="rank"><small>#</small>4</div>
+                  <h4>MySQL</h4>
+                  <p>SQL Database</p>
+                  <a href="https://www.mysql.com/">about MySQL (mysql.com)</a>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="service-inner fadeInLeft glass-box toolsCard">
+              <h3 class="glass-title">Reinforcement Learning</h3>
+              <div class="service-box list">
+                <div class="imageBox"><img src="https://pytorch.org/docs/stable/_static/images/logo-icon.svg" alt></div>
+                <div class="content">
+                  <div class="rank"><small>#</small>1</div>
+                  <h4>PyTorch</h4>
+                  <p>An open source machine learning framework that accelerates the path from research prototyping to production deployment.</p>
+                  <a href="https://pytorch.org/">about Pytorch (pytorch.org)</a>
+                </div>
+              </div>
+              <div class="service-box list">
+                <div class="imageBox"><img src="https://www.pygame.org/images/logo_lofi.png" alt></div>
+                <div class="content">
+                  <div class="rank"><small>#</small>2</div>
+                  <h4>Pygame</h4>
+                  <p>A cross-platform Pyth, RL environment.</p>
+                  <a href="https://www.pygame.org/">about Pygame (pygame.org)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume-details" class="section-padding">
+
+      <div class="section-container">
+        <div class="row">
+          <div class="timeline-centered">
+            <article class="timeline-entry">
+              <div class="timeline-entry-inner">
+                <div class="timeline-icon bg-success"><i class="entypo-feather"></i></div>
+                <div class="timeline-label">
+                  <h3 class="resume-title">IM Server</h3>
+                  <p>-  Instant  Messaging  Server</p><br>
+                  <div class="info">Django & JavaScript Websocket.</div>
+                </div>
+              </div>
+            </article>
+            <article class="timeline-entry">
+              <div class="timeline-entry-inner">
+                <div class="timeline-icon bg-info">
+                  <i class="entypo-location"></i>
+                </div>
+                <div class="timeline-label">
+                  <h3 class="resume-title">File Transfer</h3>
+                  <p>-  File Upload & Download</p><br>
+                  <div class="info">Django Upload & Download + MD5 + SQLite3.</div>
+                </div>
+              </div>
+            </article>
+            <article class="timeline-entry">
+              <div class="timeline-entry-inner">
+                <div class="timeline-icon bg-secondary"><i class="entypo-suitcase"></i></div>
+                <div class="timeline-label">
+                  <h3 class="resume-title">RL Snake</h3>
+                  <p>- Deep Reinforcement Learning Snake</p>
+                  <div class="info"><b>Online Game</b></div>
+                  <div class="info">A gluttonous snake that learns by RL.</div>
+                </div>
+              </div>
+            </article>
+            <article class="timeline-entry">
+              <div class="timeline-entry-inner">
+
+                <div class="timeline-icon bg-warning">
+                  <i class="entypo-camera"></i>
+                </div>
+                <div class="timeline-label">
+                  <h3 class="resume-title">More Plugins Coming Soon</h3>
+                  <p><br></p>
+                  <div class="info">Welcome everyone's contribution and the improvement suggestion</div>
+                  <div>...</div>
+                </div>
+              </div>
+            </article>
+            <article class="timeline-entry begin">
+              <div class="timeline-entry-inner">
+                <div class="timeline-icon" style="transform: rotate(-90deg);">
+                  <i class="entypo-flight"></i> +
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <section id="section-contact" class="section-padding">
+        <div class="section-container">
+          <div class="row"><div class="col-md-12"><h2 class="heading-title">Developer - Zmh</h2></div></div>
+          <div class="row">
+            <div class="col-md-6 col-sm-6  fadeInLeft">
+              <div class="contact-left">
+                <ul>
+                  <li><span>Country :</span> <a>China Mainland</a></li>
+                  <li><span>Province :</span> <a>Shandong</a></li>
+                  <li><span>Email :</span> <a>zmh13054618081@dingtalk.com</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer id="section-footer"><div class="section-container"><div class="row"><div class="col-md-12 text-center"><h4>by Minghan Zhang(zmh)</h4></div></div></div></footer>
+    </section>
+  </main>
+</template>
+<style scoped>
+</style>
