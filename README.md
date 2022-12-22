@@ -2,7 +2,10 @@
 
 Hello! I'm zmh-program!
 
-[Go to My GitHub Page Now](https://zmh-program.github.io/)
+### [Go to My Cloudflare Page Now - https://zmh-program-github-io.pages.dev/](https://zmh-program-github-io.pages.dev/)
+### [Go to My GitHub Page Now - https://zmh-program.github.io/](https://zmh-program.github.io/)
+
+
 ## Quick Start
 
 ```sh
