@@ -38,6 +38,7 @@ function scroll() {
         <path d="m17.707 7.707-1.414-1.414L12 10.586 7.707 6.293 6.293 7.707 12 13.414z"></path>
       </svg>
     </div>
+    <div class="circle" />
     <div class="container">
       <div class="column">
         <h2>关于</h2>
@@ -48,7 +49,7 @@ function scroll() {
         <p>前方的道路还很长，请多指教！</p>
       </div>
 
-      <div class="column">
+      <div class="column project">
         <h2>我的作品</h2>
       </div>
 
@@ -174,13 +175,23 @@ main {
   fill: #fff;
 }
 
+.circle {
+  position: absolute;
+  top: 100vh;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 36px;
+  height: 36px;
+  background: rgb(30,30,30,.8);
+  z-index: -1;
+}
+
 .container {
   position: relative;
-  transform: translateY(100%);
-  background: #1E1E1EFF;
+  transform: translateY(100vh);
+  background: rgb(30,30,30,.8);
   width: 100%;
-  height: 100%;
-  padding: 40px 0;
+  height: max-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,7 +199,9 @@ main {
 }
 
 .container .column {
-  margin: 20px;
+  width: 100%;
+  padding: 40px 20px;
+  height: max-content;
 }
 
 .container h2 {
@@ -209,10 +222,18 @@ main {
   position: absolute;
   display: block;
   width: 100%;
-  height: 3px;
+  height: 2px;
   background: #106eea;
-  bottom: -1px;
+  bottom: -6px;
   left: 0;
+}
+
+.container .project h2::after {
+  background: #70c000;
+}
+
+.project {
+  background: #282828FF;
 }
 
 .container p {
@@ -231,15 +252,14 @@ main {
 }
 
 .icp {
-  position: absolute;
   color: rgba(255,255,255,.6);
   font-size: 14px;
   font-weight: 500;
+  margin: 160px 0 40px;
   text-decoration: none;
   background: none;
   transition: .5s;
   user-select: none;
-  bottom: 20px;
 }
 
 .icp img {
