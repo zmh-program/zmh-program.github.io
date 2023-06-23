@@ -39,7 +39,23 @@ function scroll() {
       </svg>
     </div>
     <div class="container">
-      <h2>About</h2>
+      <div class="column">
+        <h2>关于</h2>
+        <p>我是 <span>zmh-program</span>，生于 <span>2009</span> 年。</p>
+        <p>热爱深度强化学习、喜爱钻研网络相关的知识，</p>
+        <p>对前后端有一定的理解，涉猎大数据、爬虫、网络攻防、云原生和云计算等领域。</p>
+        <p>喜欢哪个就学哪个！热衷探索，喜爱信息技术的一切！</p>
+        <p>前方的道路还很长，请多指教！</p>
+      </div>
+
+      <div class="column">
+        <h2>我的作品</h2>
+      </div>
+
+      <a class="icp" href="https://beian.miit.gov.cn/" target="_blank">
+        <img src="/gov.png" alt="icp" />
+        <span>鲁ICP备2022034318号-1</span>
+      </a>
     </div>
   </main>
 </template>
@@ -171,14 +187,21 @@ main {
   z-index: 1;
 }
 
+.container .column {
+  margin: 20px;
+}
+
 .container h2 {
-  font-size: 32px;
+  font-size: 26px;
   font-weight: bold;
-  margin: 20px 0;
+  width: max-content;
+  margin: 20px auto 40px;
   position: relative;
   color: #fff;
   transition: .25s;
   user-select: none;
+  font-family: "PingFang SC", "Microsoft Yahei", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+  cursor: pointer;
 }
 
 .container h2::after {
@@ -187,12 +210,52 @@ main {
   display: block;
   width: 100%;
   height: 3px;
-  background: #149ddd;
-  bottom: 1px;
+  background: #106eea;
+  bottom: -1px;
   left: 0;
 }
 
-.container h2:hover {
-  color: #149ddd;
+.container p {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255,255,255,.8);
+  margin: 0 0 20px;
+  text-align: center;
+  user-select: none;
+  transition: .25s;
+  font-family: "PingFang SC", "Microsoft Yahei", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+}
+
+.container span {
+  font-family: Ubuntu, "PingFang SC", "Microsoft Yahei", "Helvetica Neue", Helvetica, Consolas, "Comic Sans MS", "Segoe UI", Arial, sans-serif;
+}
+
+.icp {
+  position: absolute;
+  color: rgba(255,255,255,.6);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  background: none;
+  transition: .5s;
+  user-select: none;
+  bottom: 20px;
+}
+
+.icp img {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  vertical-align: middle;
+  opacity: .8;
+  transition: .5s;
+}
+
+.icp:hover {
+  color: #fff;
+}
+
+.icp:hover img {
+  opacity: 1;
 }
 </style>
