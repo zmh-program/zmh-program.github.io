@@ -18,6 +18,8 @@ function scroll() {
     main.value?.scrollTop || 0,
     document.body.clientHeight,
       main.value,
+      1000,
+      rotate,
   );
 }
 </script>
@@ -37,7 +39,7 @@ function scroll() {
       </svg>
     </div>
     <div class="container">
-      hi
+      <h2>About</h2>
     </div>
   </main>
 </template>
@@ -138,13 +140,22 @@ main {
   border-radius: 50%;
   animation-delay: .5s;
   animation: FadeInAnimation 2.5s ease-in-out;
+  transition: .25s ease-in;
 }
 
 .arrow svg {
-  fill: #fff;
+  fill: #eee;
   width: 32px;
   height: 32px;
-  transition: transform .2s ease-in-out;
+  transition: .2s;
+}
+
+.arrow:hover {
+  background: rgba(255,255,255,.15);
+}
+
+.arrow:hover svg {
+  fill: #fff;
 }
 
 .container {
@@ -153,9 +164,35 @@ main {
   background: #1E1E1EFF;
   width: 100%;
   height: 100%;
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 1;
+}
+
+.container h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 20px 0;
+  position: relative;
+  color: #fff;
+  transition: .25s;
+  user-select: none;
+}
+
+.container h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #149ddd;
+  bottom: 1px;
+  left: 0;
+}
+
+.container h2:hover {
+  color: #149ddd;
 }
 </style>
