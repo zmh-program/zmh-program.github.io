@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import TypingText from "@/components/TypingText.vue";
 import type { Ref } from "vue";
-import { ref, watch } from "vue";
+import { ref } from "vue";
 
 const main: Ref<HTMLElement | null> = ref(null);
 const degree = ref(0);
 
 function scroll() {
   const pos = main.value?.scrollTop || 0;
-  degree.value = (pos / document.body.clientHeight) * 360;
+  degree.value = (pos / document.body.clientHeight) * 180;
 }
 </script>
 
