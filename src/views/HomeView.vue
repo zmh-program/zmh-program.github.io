@@ -1,10 +1,12 @@
 <script setup lang="ts">
 
+import TypingText from "@/components/TypingText.vue";
 </script>
 
 <template>
   <main>
     <img class="background" src="/background.webp" alt />
+    <TypingText content="Nothing is impossible." class="quote" />
   </main>
 </template>
 
