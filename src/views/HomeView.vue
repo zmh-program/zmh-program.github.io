@@ -15,7 +15,7 @@ function scroll() {
 <template>
   <main ref="main" @scroll="scroll">
     <div class="fabric">
-      <img src="/background.webp" class="background" alt />
+      <img src="/background.webp" class="background" alt="" />
       <div class="avatar">
         <img src="/avatar/zmh-program.png" alt="zmh-program" />
       </div>
