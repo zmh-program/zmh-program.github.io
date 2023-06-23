@@ -1,12 +1,9 @@
 @import './base.css';
 
 #app {
-  width: 100%;
   font-weight: normal;
 }
-body, main {
-  width: 100%;
-}
+
 a,
 .green {
   text-decoration: none;
@@ -24,9 +21,5 @@ a,
   body {
     display: flex;
     place-items: center;
-  }
-
-  #app {
-    display: inherit;
   }
 }
