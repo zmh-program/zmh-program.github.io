@@ -38,7 +38,7 @@ export class TypingEffect {
     }
     if (this.index <= this.operation.length) {
       this.ref.value = this.operation.substring( 0, this.index ) + ( this.cursor ? "|" : " " );
-      this.delayerCall(Math.random() * (this.enableCursor ? 400 : 200));
+      this.delayerCall(Math.random() * (this.enableCursor ? 300 : 200));
     } else {
       if (this.offset === 0) this.finish();
       if (this.enableCursor && this.offset <= 12) {
