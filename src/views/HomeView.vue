@@ -300,6 +300,10 @@ main {
   max-width: 100%;
 }
 
+.stats img {
+  max-width: 100%;
+}
+
 .circle {
   position: absolute;
   top: 100vh;
