@@ -20,7 +20,7 @@ main {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  background: url("/donate/wallpaper.jpg");
+  background: url("/donate/wallpaper.webp");
 }
 
 main * {
