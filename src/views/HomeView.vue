@@ -123,7 +123,7 @@ function scroll() {
           <div class="element friend">
             <img src="/friend/wmz1024.jpg" alt="">
             <h3>wmz1024</h3>
-            <p>精通前后端（<span>Vue, React, Next, Golang, PHP, Python</span> 等），<br>对云开发，云原生，云计算，网络有独特的见解。<br>一个目前在读小学五年级的一个小学生 是一个小小白（小白：指全栈）</p>
+            <p>精通前后端（<span>Vue, React, Next, Golang, PHP, Python</span> 等），<br>对云开发，云原生，云计算，网络有独特的见解。<br>目前在读小学五年级的一个小学生，<br>是一个小小白（小白：指全栈）</p>
             <div class="social">
               <a href="https://github.com/wmz1024"><github /><span>wmz1024</span></a>
               <a href="https://space.bilibili.com/403083793"><bilibili /><span>wmz1024</span></a>
@@ -176,8 +176,9 @@ function scroll() {
             <h3>what</h3>
             <p>
               擅长 <span>Vue</span>，原生前端，<span>NodeJS</span> 开发<br>
+              <span>CloudBase</span> 开发<br>
               <a href="https://40code.com"><span>40code</span></a> 站长<br>
-              <div class="social">
+              <div class="social" style="transform: translateY(24px)">
                 <a href="https://github.com/52black"><github /><span>52black</span></a>
                 <a href="https://space.bilibili.com/444298188"><bilibili /><span>40code社区</span></a>
                 <a href="https://40code.com"><site /><span>40code.com</span></a>
@@ -491,7 +492,7 @@ main {
 .element.friend {
   background: #282828FF;
   width: 460px;
-  height: max-content;
+  height: 370px;
 }
 
 .element.friend p {
