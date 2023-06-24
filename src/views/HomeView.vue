@@ -337,6 +337,7 @@ main {
   font-size: 26px;
   font-weight: bold;
   width: max-content;
+  white-space: nowrap;
   margin: 20px auto 40px;
   position: relative;
   color: #fff;
