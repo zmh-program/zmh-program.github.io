@@ -7,6 +7,8 @@ import Github from "@/components/icons/github.vue";
 import Twitter from "@/components/icons/twitter.vue";
 import Blog from "@/components/icons/blog.vue";
 import Arrow from "@/components/icons/arrow.vue";
+import Bilibili from "@/components/icons/bilibili.vue";
+import Site from "@/components/icons/site.vue";
 
 const main: Ref<HTMLElement | null> = ref(null);
 const degree = ref(0);
@@ -50,6 +52,7 @@ function scroll() {
           <a href="https://github.com/zmh-program" target="_blank"><github /></a>
           <a href="https://twitter.com/ProgramZmh" target="_blank"><twitter /></a>
           <a href="https://zmh-program.blog.csdn.net" target="_blank"><blog /></a>
+          <a href="https://space.bilibili.com/1984532193" target="_blank"><bilibili /></a>
         </div>
       </div>
 
@@ -112,11 +115,20 @@ function scroll() {
             <img src="/friend/linwin.png" alt="">
             <h3>Linwin-Cloud</h3>
             <p>开源软件贡献者。专注网络安全和计算机开源软件。擅长社会工程学。初二，热爱开源的开发者。著有多款开源软件。对于计算机网络安全有独特的见解。擅长进行社会工程学，善于对钓鱼网站的开发，也擅长Linux运维，懂得Linux服务器维护和网站。Java造诣极深，非常擅长前端开发。</p>
+            <div class="social">
+              <a href="https://github.com/Linwin-Cloud"><github /><span>Linwin-Cloud</span></a>
+              <a href="https://space.bilibili.com/1012391123"><bilibili /><span>LinWinCloud 联沃云</span></a>
+            </div>
           </div>
           <div class="element friend">
             <img src="/friend/wmz1024.jpg" alt="">
             <h3>wmz1024</h3>
             <p>精通前后端（<span>Vue, React, Next, Golang, PHP, Python</span> 等），<br>对云开发，云原生，云计算，网络有独特的见解。<br>一个目前在读小学五年级的一个小学生 是一个小小白（小白：指全栈）</p>
+            <div class="social">
+              <a href="https://github.com/wmz1024"><github /><span>wmz1024</span></a>
+              <a href="https://space.bilibili.com/403083793"><bilibili /><span>wmz1024</span></a>
+              <a href="https://wmza.cn"><site /><span>wmza.cn</span></a>
+            </div>
           </div>
           <div class="element friend">
             <img src="/friend/sh1n3zz.jpg" alt="">
@@ -128,13 +140,23 @@ function scroll() {
               星穹CDN <span>(Star Waf)</span> 创始人<br>
               <span>LeSun IDC</span> 创始人
             </p>
+            <div class="social">
+              <a href="https://github.com/Sh1n3zZ"><github /><span>Sh1n3zZ</span></a>
+              <a href="https://lightxi.com"><site /><span>lightxi.com</span></a>
+            </div>
           </div>
           <div class="element friend">
             <img src="/friend/kernel.jpg" alt="">
             <h3>主核kernel</h3>
             <p>
-              “创新是我们基因的一部分。”
+              “创新是我们基因的一部分。”<br>
+              喜欢玩 <span>scratch / turbowarp</span><br>
+              对机器学习有一定研究<br>
             </p>
+            <div class="social">
+              <a href="https://space.bilibili.com/545450739"><bilibili /><span>主核kernel</span></a>
+              <a href="https://kernel.deeptrain.net"><site /><span>kernel.deeptrain.net</span></a>
+            </div>
           </div>
           <div class="element friend">
             <img src="/friend/creeper.jpg" alt="">
@@ -145,6 +167,9 @@ function scroll() {
               我会一点 <span>easyx</span> 和 <span>ue5, unity</span> 的游戏制作（真的一点点）”<br>
               ——来自航小怕
             </p>
+            <div class="social">
+              <a href="https://space.bilibili.com/415488188"><bilibili /><span>蛐蛐航小怕</span></a>
+            </div>
           </div>
           <div class="element friend">
             <img src="/friend/what.jpg" alt="">
@@ -152,12 +177,17 @@ function scroll() {
             <p>
               擅长 <span>Vue</span>，原生前端，<span>NodeJS</span> 开发<br>
               <a href="https://40code.com"><span>40code</span></a> 站长<br>
+              <div class="social">
+                <a href="https://github.com/52black"><github /><span>52black</span></a>
+                <a href="https://space.bilibili.com/444298188"><bilibili /><span>40code社区</span></a>
+                <a href="https://40code.com"><site /><span>40code.com</span></a>
+              </div>
             </p>
           </div>
         </div>
       </div>
 
-      <a class="icp" href="https://beian.miit.gov.cn/" target="_blank">
+      <a class="icp" href="https://beian.miit.gov.cn" target="_blank">
         <img src="/gov.png" alt="icp" />
         <span>鲁ICP备2022034318号-1</span>
       </a>
@@ -470,5 +500,30 @@ main {
 
 .element.friend img {
   border-radius: 50%;
+}
+.social {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.social a {
+  background-color: inherit !important;
+  color: #fff !important;
+  text-decoration: unset;
+  text-underline-offset: 2px;
+  transition: .25s;
+}
+.social a:hover {
+  text-decoration: underline;
+}
+.social svg {
+  fill: #fff;
+  width: 24px;
+  height: 24px;
+  transform: translate(-4px, 6px);
+}
+.social span {
+  font-size: 16px;
 }
 </style>
