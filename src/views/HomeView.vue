@@ -297,6 +297,7 @@ main {
   height: max-content;
   left: 50%;
   transform: translateX(-50%);
+  max-width: 100%;
 }
 
 .circle {
@@ -487,7 +488,8 @@ main {
 .element.friend {
   background: #282828FF;
   width: 460px;
-  height: 370px;
+  height: max-content;
+  min-height: 370px;
 }
 
 .element.friend p {
