@@ -8,6 +8,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView
+    },
+    {
+      path: '/donate',
+      name: 'donate',
+      component: () => import('../views/DonateView.vue')
     }
   ]
 })

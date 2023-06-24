@@ -178,12 +178,12 @@ function scroll() {
               擅长 <span>Vue</span>，原生前端，<span>NodeJS</span> 开发<br>
               <span>CloudBase</span> 开发<br>
               <a href="https://40code.com"><span>40code</span></a> 站长<br>
-              <div class="social" style="transform: translateY(24px)">
-                <a href="https://github.com/52black"><github /><span>52black</span></a>
-                <a href="https://space.bilibili.com/444298188"><bilibili /><span>40code社区</span></a>
-                <a href="https://40code.com"><site /><span>40code.com</span></a>
-              </div>
             </p>
+            <div class="social">
+              <a href="https://github.com/52black"><github /><span>52black</span></a>
+              <a href="https://space.bilibili.com/444298188"><bilibili /><span>40code社区</span></a>
+              <a href="https://40code.com"><site /><span>40code.com</span></a>
+            </div>
           </div>
         </div>
       </div>
