@@ -137,8 +137,8 @@ function scroll() {
               全能型人才<br>
               对网络攻防，网络安全有极高造诣<br><br>
               晞云（珠海市晞云云科技有限公司）创始人<br>
-              星穹CDN <span>(Star Waf)</span> 创始人<br>
-              <span>LeSun IDC</span> 创始人
+              星穹CDN <span>(Star WAF)</span> 创始人<br>
+              <span>LightXi IDC</span> 创始人
             </p>
             <div class="social">
               <a href="https://github.com/Sh1n3zZ"><github /><span>Sh1n3zZ</span></a>
@@ -168,6 +168,7 @@ function scroll() {
               ——来自航小怕
             </p>
             <div class="social">
+              <a href="https://github.com/Hangxiaopa"><github /><span>Hangxiaopa</span></a>
               <a href="https://space.bilibili.com/415488188"><bilibili /><span>蛐蛐航小怕</span></a>
             </div>
           </div>
@@ -298,6 +299,7 @@ main {
   left: 50%;
   transform: translateX(-50%);
   max-width: 100%;
+  background: none !important;
 }
 
 .stats img {
