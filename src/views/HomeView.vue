@@ -214,26 +214,6 @@ main {
   z-index: -1;
 }
 
-@keyframes ScaleInAnimation {
-  0% {
-    transform: scale(1.1);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes FadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .fabric .background {
   width: 100%;
   height: 100%;

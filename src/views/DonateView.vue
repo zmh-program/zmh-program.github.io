@@ -49,6 +49,7 @@ main {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 20px 10px;
+  animation: FadeInAnimation 1.2s ease-out;
 }
 
 h2 {
@@ -105,5 +106,7 @@ p {
   border-radius: 12px;
   backdrop-filter: blur(8px);
   margin: 10px;
+  animation-delay: 1.2s;
+  animation: FadeInAnimation .6s ease-in-out;
 }
 </style>
