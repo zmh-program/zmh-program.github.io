@@ -188,6 +188,7 @@ function scroll() {
         </div>
       </div>
 
+      <RouterLink to="/donate" class="donate">捐助</RouterLink>
       <a class="icp" href="https://beian.miit.gov.cn" target="_blank">
         <img src="/gov.png" alt="icp" />
         <span>鲁ICP备2022034318号-1</span>
@@ -398,11 +399,25 @@ main {
   font-family: Ubuntu, "PingFang SC", "Microsoft Yahei", "Helvetica Neue", Helvetica, Consolas, "Comic Sans MS", "Segoe UI", Arial, sans-serif;
 }
 
+.donate {
+  font-size: 14px;
+  width: max-content;
+  height: max-content;
+  color: rgba(255,255,255,.6);
+  text-align: center;
+  margin-top: 160px;
+  transition: 1s;
+}
+
+.donate:hover {
+  color: #fff;
+}
+
 .icp {
   color: rgba(255,255,255,.6);
   font-size: 14px;
   font-weight: 500;
-  margin: 160px 0 40px;
+  margin: 20px 0 40px;
   text-decoration: none;
   background: none;
   transition: .5s;
