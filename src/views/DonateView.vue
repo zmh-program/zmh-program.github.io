@@ -4,10 +4,9 @@
 
 <template>
   <main>
-    <img src="/background.webp" class="background" alt="" />
     <div class="donate">
       <h2>Donate</h2>
-      <p>如果您觉得我的开源项目对您有帮助，欢迎捐助！感谢您的支持！</p><br>
+      <p>如果您觉得我的开源项目对您有帮助，欢迎捐助！<br>感谢您的支持！</p><br>
       <div class="pay">
         <div><p>支付宝</p><img class="pay" src="/donate/alipay.jpg" alt="支付宝"></div>
         <div><p>微信</p><img class="pay" src="/donate/wechat.jpg" alt="微信"></div>
@@ -21,13 +20,11 @@ main {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  background: url("/donate/wallpaper.jpg");
 }
 
-.background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+main * {
+  user-select: none;
 }
 
 .donate {
@@ -94,6 +91,7 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 8px;
 }
 .pay p {
   color: white;
