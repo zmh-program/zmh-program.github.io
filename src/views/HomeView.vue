@@ -47,6 +47,7 @@ function scroll() {
         <p>对前后端有一定的理解，涉猎大数据、爬虫、网络攻防、云原生和云计算等领域。</p>
         <p>喜欢哪个就学哪个！热衷探索，喜爱信息技术的一切！</p>
         <p>前方的道路还很长，请多指教！</p>
+        <img src="https://stats.deeptrain.net/user/zmh-program" alt="zmh-program's Github Stats" class="stats">
         <div class="icons">
           <a href="https://github.com/zmh-program" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>
@@ -72,6 +73,41 @@ function scroll() {
             <img src="/project/stats.png" alt="">
             <h3>Code Statistic</h3>
             <p>⚡ 动态生成你的 GitHub 统计卡片！</p>
+          </a>
+          <a class="work" href="https://fystart.deeptrain.net">
+            <img src="/project/fystart.ico" alt="">
+            <h3>Fystart</h3>
+            <p>🍏 一个简洁的起始页，为你所想</p>
+          </a>
+          <a class="work" href="https://github.com/zmh-program/web-chatgpt-qq-bot">
+            <img src="/project/webchatgpt.ico" alt="">
+            <h3>Web ChatGPT QQ Bot</h3>
+            <p>🍉 图形化界面一键配置 ChatGPT Mirai QQ Bot 机器人</p>
+          </a>
+          <a class="work" href="https://github.com/zmh-program/turbowarp-clipx">
+            <img src="/project/clipx.png" alt="">
+            <h3>TurboWarp ClipX</h3>
+            <p>📦 TurboWarp 高效开发扩展插件，为您提供更好的开发体验</p>
+          </a>
+          <a class="work" href="https://admin-pages.deeptrain.net">
+            <img src="/project/admin.png" alt="">
+            <h3>Admin Pages</h3>
+            <p>🥗 更完美的原生前端管理员界面</p>
+          </a>
+          <a class="work" href="https://b.deeptrain.net">
+            <img src="/project/bilibili.png" alt="">
+            <h3>BiliBili Stats</h3>
+            <p>🍇 动态生成B站用户简介SVG图像</p>
+          </a>
+          <a class="work" href="https://github.com/zmh-program/fymonitor">
+            <img src="/project/fymonitor.jpg" alt="" style="border-radius: 40%">
+            <h3>Fymonitor</h3>
+            <p>⚡ 高性能高扩展性分布式web监控系统</p>
+          </a>
+          <a class="work" href="https://github.com/zmh-program/vokkot">
+            <img src="/project/fymonitor.jpg" alt="">
+            <h3>Vokkot</h3>
+            <p>🚀 你的下一代文件存储分发系统</p>
           </a>
         </div>
       </div>
@@ -196,6 +232,11 @@ main {
 
 .arrow:hover svg {
   fill: #fff;
+}
+
+.stats {
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .circle {
@@ -332,6 +373,8 @@ main {
   width: max-content;
   margin: 0 auto;
   gap: 32px;
+  box-sizing: border-box;
+  justify-content: center;
 }
 
 .works .work {
