@@ -186,6 +186,28 @@ function scroll() {
               <a href="https://40code.com"><site /><span>40code.com</span></a>
             </div>
           </div>
+          <div class="element friend">
+            <img src="/friend/shenjack.jpg" alt="">
+            <h3>shenjack</h3>
+            <p>
+              <span>happy lazy HWS with me</span>
+            </p>
+            <div class="social">
+              <a href="https://github.com/shenjackyuanjie"><github /><span>shenjackyuanjie</span></a>
+              <a href="https://space.bilibili.com/423825607"><bilibili /><span>shenjack_</span></a>
+            </div>
+          </div>
+          <div class="element friend">
+            <img src="/friend/mq.jpg" alt="">
+            <h3>麻雀.</h3>
+            <p>
+              学海无涯 回头是岸
+            </p>
+            <div class="social">
+              <a href="https://github.com/Dayanshifu"><github /><span>Dayanshifu</span></a>
+              <a href="https://www.littleyan.tk"><site /><span>littleyan.tk</span></a>
+            </div>
+          </div>
         </div>
       </div>
 
