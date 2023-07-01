@@ -59,47 +59,47 @@ function scroll() {
         <h2>我的作品</h2>
         <div class="box">
           <a class="element" href="https://deeptrain.net">
-            <img src="/project/deeptrain.png" alt="">
+            <img src="/project/deeptrain.webp" alt="">
             <h3>Deeptrain</h3>
             <p>🔥 Deeptrain, 一个开源深度强化学习训练平台</p>
           </a>
           <a class="element" href="https://stats.deeptrain.net">
-            <img src="/project/stats.png" alt="">
+            <img src="/project/stats.webp" alt="">
             <h3>Code Statistic</h3>
             <p>⚡ 动态生成你的 GitHub 统计卡片！</p>
           </a>
           <a class="element" href="https://fystart.deeptrain.net">
-            <img src="/project/fystart.ico" alt="">
+            <img src="/project/fystart.webp" alt="">
             <h3>Fystart</h3>
             <p>🍏 一个简洁的起始页，为你所想</p>
           </a>
           <a class="element" href="https://github.com/zmh-program/web-chatgpt-qq-bot">
-            <img src="/project/webchatgpt.ico" alt="">
+            <img src="/project/webchatgpt.webp" alt="">
             <h3>Web ChatGPT QQ Bot</h3>
             <p>🍉 图形化界面一键配置 ChatGPT Mirai QQ Bot 机器人</p>
           </a>
           <a class="element" href="https://github.com/zmh-program/turbowarp-clipx">
-            <img src="/project/clipx.png" alt="">
+            <img src="/project/clipx.webp" alt="">
             <h3>TurboWarp ClipX</h3>
             <p>📦 TurboWarp 高效开发扩展插件，为您提供更好的开发体验</p>
           </a>
           <a class="element" href="https://admin-pages.deeptrain.net">
-            <img src="/project/admin.png" alt="">
+            <img src="/project/admin.webp" alt="">
             <h3>Admin Pages</h3>
             <p>🥗 更完美的原生前端管理员界面</p>
           </a>
           <a class="element" href="https://github.com/zmh-program/fymonitor">
-            <img src="/project/fymonitor.jpg" alt="" style="border-radius: 40%">
+            <img src="/project/fymonitor.webp" alt="" style="border-radius: 40%">
             <h3>Fymonitor</h3>
             <p>⚡ 高性能高扩展性分布式web监控系统</p>
           </a>
           <a class="element" href="https://b.deeptrain.net">
-            <img src="/project/bilibili.png" alt="">
+            <img src="/project/bilibili.webp" alt="">
             <h3>BiliBili Stats</h3>
             <p>🍇 动态生成B站用户简介SVG图像</p>
           </a>
           <a class="element" href="https://github.com/zmh-program/vokkot">
-            <img src="/project/vokkot.jpg" alt="" style="border-radius: 12px">
+            <img src="/project/vokkot.webp" alt="" style="border-radius: 12px">
             <h3>Vokkot</h3>
             <p>🚀 你的下一代文件存储分发系统</p>
           </a>
@@ -212,7 +212,7 @@ function scroll() {
 
       <RouterLink to="/donate" class="donate">捐助</RouterLink>
       <a class="icp" href="https://beian.miit.gov.cn" target="_blank">
-        <img src="/gov.png" alt="icp" />
+        <img src="/gov.webp" alt="icp" />
         <span>鲁ICP备2022034318号-1</span>
       </a>
     </div>
