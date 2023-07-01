@@ -19,7 +19,6 @@ function rotate() {
 }
 
 function scroll() {
-  console.log(main.value)
   if (main.value) scrollTo(
     main.value?.scrollTop || 0,
     document.body.clientHeight,
