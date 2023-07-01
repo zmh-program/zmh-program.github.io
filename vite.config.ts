@@ -9,7 +9,22 @@ import {createHtmlPlugin} from "vite-plugin-html";
 export default defineConfig({
   plugins: [
     vue(),
-    VitePWA(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      injectRegister: 'inline',
+      includeAssets: [
+        'avatar/*.webp',
+        'donate/*.webp',
+        'friend/*.webp',
+        'project/*.webp',
+        'background.webp',
+        'gov.webp',
+        'https://fonts.googlefonts.cn/css?family=Ubuntu',
+      ],
+      devOptions: {
+        enabled: true,
+      }
+    }),
     createHtmlPlugin({
       minify: true,
     }),
