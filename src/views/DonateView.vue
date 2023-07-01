@@ -8,8 +8,8 @@
       <h2>Donate</h2>
       <p>如果您觉得我的开源项目对您有帮助，欢迎捐助！<br>感谢您的支持！</p><br>
       <div class="pay">
-        <div><p>支付宝</p><img class="pay" src="/donate/alipay.jpg" alt="支付宝"></div>
-        <div><p>微信</p><img class="pay" src="/donate/wechat.jpg" alt="微信"></div>
+        <div><p>支付宝</p><img class="pay" src="/donate/alipay.webp" alt="支付宝"></div>
+        <div><p>微信</p><img class="pay" src="/donate/wechat.webp" alt="微信"></div>
       </div>
     </div>
   </main>
