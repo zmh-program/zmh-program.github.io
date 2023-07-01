@@ -21,6 +21,19 @@ export default defineConfig({
         'gov.webp',
         'https://fonts.googlefonts.cn/css?family=Ubuntu',
       ],
+      workbox: {
+        runtimeCaching: [{
+            urlPattern: new RegExp('^https://fonts.googlefonts.cn/'),
+            handler: "CacheFirst",
+            options: {
+              cacheName: "google-fonts-stylesheets",
+              expiration: {
+                maxEntries: 10,
+                maxAgeSeconds: 60 * 60 * 24 * 365,
+              }
+            }
+          }],
+      },
       devOptions: {
         enabled: true,
       }
