@@ -33,7 +33,7 @@ function scroll() {
   <main ref="main" @scroll="rotate">
     <div class="fabric">
       <img src="/background.webp" class="background" alt="" />
-      <div class="avatar"><img src="/avatar/zmh-program.png" alt="zmh-program" /></div>
+      <div class="avatar"><img src="/avatar/zmh-program.webp" alt="zmh-program" /></div>
       <TypingText content="Nothing is impossible." class="quote" />
     </div>
     <div class="arrow" @click="scroll"><arrow :degree="degree" /></div>
@@ -111,7 +111,7 @@ function scroll() {
         <p>感谢你们的支持！</p>
         <div class="box">
           <div class="element friend">
-            <img src="/friend/linwin.png" alt="">
+            <img src="/friend/linwin.webp" alt="">
             <h3>Linwin-Cloud</h3>
             <p>开源软件贡献者。专注网络安全和计算机开源软件。擅长社会工程学。初二，热爱开源的开发者。著有多款开源软件。对于计算机网络安全有独特的见解。擅长进行社会工程学，善于对钓鱼网站的开发，也擅长Linux运维，懂得Linux服务器维护和网站。Java造诣极深，非常擅长前端开发。</p>
             <div class="social">
@@ -120,7 +120,7 @@ function scroll() {
             </div>
           </div>
           <div class="element friend">
-            <img src="/friend/wmz1024.jpg" alt="">
+            <img src="/friend/wmz1024.webp" alt="">
             <h3>wmz1024</h3>
             <p>精通前后端（<span>Vue, React, Next, Golang, PHP, Python</span> 等），<br>对云开发，云原生，云计算，网络有独特的见解。<br>目前在读小学五年级的一个小学生，<br>是一个小小白（小白：指全栈）</p>
             <div class="social">
@@ -130,7 +130,7 @@ function scroll() {
             </div>
           </div>
           <div class="element friend">
-            <img src="/friend/sh1n3zz.jpg" alt="">
+            <img src="/friend/sh1n3zz.webp" alt="">
             <h3>Sh1n3zZ</h3>
             <p>
               全能型人才<br>
@@ -145,7 +145,7 @@ function scroll() {
             </div>
           </div>
           <div class="element friend">
-            <img src="/friend/kernel.jpg" alt="">
+            <img src="/friend/kernel.webp" alt="">
             <h3>主核kernel</h3>
             <p>
               “创新是我们基因的一部分。”<br>
@@ -158,7 +158,7 @@ function scroll() {
             </div>
           </div>
           <div class="element friend">
-            <img src="/friend/creeper.jpg" alt="">
+            <img src="/friend/creeper.webp" alt="">
             <h3>航小怕</h3>
             <p>
               小学生，在学高数（<br><br>
@@ -172,7 +172,7 @@ function scroll() {
             </div>
           </div>
           <div class="element friend">
-            <img src="/friend/what.jpg" alt="">
+            <img src="/friend/what.webp" alt="">
             <h3>what</h3>
             <p>
               擅长 <span>Vue</span>，原生前端，<span>NodeJS</span> 开发<br>
@@ -186,7 +186,7 @@ function scroll() {
             </div>
           </div>
           <div class="element friend">
-            <img src="/friend/shenjack.jpg" alt="">
+            <img src="/friend/shenjack.webp" alt="">
             <h3>shenjack</h3>
             <p>
               <span>happy lazy HWS with me</span>
@@ -197,7 +197,7 @@ function scroll() {
             </div>
           </div>
           <div class="element friend">
-            <img src="/friend/mq.jpg" alt="">
+            <img src="/friend/mq.webp" alt="">
             <h3>麻雀.</h3>
             <p>
               学海无涯 回头是岸
