@@ -68,7 +68,7 @@ function scroll() {
             <h3>Code Statistic</h3>
             <p>⚡ 动态生成你的 GitHub 统计卡片！</p>
           </a>
-          <a class="element" href="https://fystart.deeptrain.net">
+          <a class="element" href="https://fystart.cn">
             <img src="/project/fystart.webp" alt="">
             <h3>Fystart</h3>
             <p>🍏 一个简洁的起始页，为你所想</p>
