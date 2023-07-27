@@ -309,7 +309,7 @@ main {
   font-size: 12px;
   font-weight: 500;
   color: rgba(16, 110, 234);
-  margin: 0 6px;
+  margin: 4px 6px;
   padding: 4px 8px;
   border-radius: 4px;
   background: rgba(231, 241, 253);
