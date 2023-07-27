@@ -41,11 +41,34 @@ function scroll() {
     <div class="container">
       <div class="column about">
         <h2>关于</h2>
+        <div class="lang" style="transform: translateY(12px)">
+          <span>Go</span>
+          <span>Pascal</span>
+          <span>Python</span>
+          <span>C</span>
+          <span>Arduino</span>
+          <span>VB</span>
+        </div>
+        <div class="lang">
+          <span>PHP</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>TypeScript</span>
+          <span>Vue</span>
+          <span>React</span>
+        </div>
         <p>我是 <span>zmh-program</span>，生于 <span>2009</span> 年。</p>
         <p>热爱深度强化学习、喜爱钻研网络相关的知识，</p>
         <p>对前后端有独特的见解，涉猎大数据、爬虫、网络攻防、云原生和云计算等领域。</p>
         <p>喜欢哪个就学哪个！热衷探索，喜爱信息技术的一切！</p>
         <p>前方的道路还很长，请多指教！</p>
+        <div class="tag">
+          <span>全栈开发</span>
+          <span>机器学习</span>
+          <span>云</span>
+          <span>一言不合造轮子</span>
+        </div>
         <a href="https://github.com/zmh-program" class="stats"><img src="https://stats.deeptrain.net/user/zmh-program" alt="zmh-program's Github Stats"></a>
         <div class="icons">
           <a href="https://github.com/zmh-program" target="_blank"><github /></a>
@@ -74,7 +97,7 @@ function scroll() {
             <p>🍏 一个简洁的起始页，为你所想</p>
           </a>
           <a class="element" href="https://github.com/zmh-program/web-chatgpt-qq-bot">
-            <img src="/project/webchatgpt.webp" alt="">
+            <img src="/project/webchatgpt.webp" alt="" style="border-radius: 12px">
             <h3>Web ChatGPT QQ Bot</h3>
             <p>🍉 图形化界面一键配置 ChatGPT Mirai QQ Bot 机器人</p>
           </a>
@@ -102,6 +125,21 @@ function scroll() {
             <img src="/project/vokkot.webp" alt="" style="border-radius: 12px">
             <h3>Vokkot</h3>
             <p>🚀 你的下一代文件存储分发系统</p>
+          </a>
+          <a class="element" href="https://notes.lightxi.com">
+            <img src="/project/lightnotes.ico" alt="">
+            <h3>Light Notes</h3>
+            <p>📝 一个极简、美观、多端同步的轻量化在线便签</p>
+          </a>
+          <a class="element" href="https://nio.fystart.cn">
+            <img src="/project/chatnio.png" alt="">
+            <h3>Chat Nio</h3>
+            <p>👋 一个简洁、美观、轻量的开源 AI 聊天助手</p>
+          </a>
+          <a class="element" href="https://github.com/zmh-program/kylin-go">
+            <h3>Kylin Go</h3>
+            <div style="height: 6px" />
+            <p>🐉 一款基于 Golang 的跨平台高效的编程语言 (Go解释器)。可使用中文等语言进行编程。面相过程，直译式编程语言。</p>
           </a>
         </div>
       </div>
@@ -256,6 +294,64 @@ main {
   height: 86px;
   backdrop-filter: blur(2px);
   animation: FadeInAnimation 1.5s ease-in-out;
+}
+
+.tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 20px;
+  flex-wrap: wrap;
+}
+
+.tag span {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(16, 110, 234);
+  margin: 0 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(231, 241, 253);
+  backdrop-filter: blur(2px);
+  transition: .35s;
+  user-select: none;
+  cursor: pointer;
+  font-family: "PingFang SC", "Microsoft Yahei", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+}
+
+.tag span:hover {
+  background: rgba(16, 110, 234, .8);
+  color: #fff;
+}
+
+.lang {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 20px;
+}
+
+.lang span {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, .6);
+  margin: 4px 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, .1);
+  backdrop-filter: blur(2px);
+  transition: .35s;
+  user-select: none;
+  cursor: pointer;
+  font-family: "PingFang SC", "Microsoft Yahei", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+}
+
+.lang span:hover {
+  background: rgba(255, 255, 255, .2);
+  color: #fff;
 }
 
 .fabric .avatar img {
