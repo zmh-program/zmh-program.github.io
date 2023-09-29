@@ -192,7 +192,7 @@ function scroll() {
             </p>
             <div class="social">
               <a href="https://space.bilibili.com/545450739"><bilibili /><span>主核kernel</span></a>
-              <a href="https://kernel.deeptrain.net"><site /><span>kernel.deeptrain.net</span></a>
+              <a href="https://hujiarong.top"><site /><span>hujiarong.top</span></a>
             </div>
           </div>
           <div class="element friend">
