@@ -70,6 +70,7 @@ function scroll() {
           <span>一言不合造轮子</span>
         </div>
         <a href="https://github.com/zmh-program" class="stats"><img src="https://stats.deeptrain.net/user/zmh-program" alt="zmh-program's Github Stats"></a>
+        <a href="https://github.com/Deeptrain-Community" class="stats"><img src="https://stats.deeptrain.net/user/Deeptrain-Community" alt="Deeptrain's Github Stats"></a>
         <div class="icons">
           <a href="https://github.com/zmh-program" target="_blank"><github /></a>
           <a href="https://twitter.com/ProgramZmh" target="_blank"><twitter /></a>
@@ -86,15 +87,20 @@ function scroll() {
             <h3>Deeptrain</h3>
             <p>🔥 Deeptrain, 一个开源深度强化学习训练平台</p>
           </a>
+          <a class="element" href="https://fystart.com">
+            <img src="/project/fystart.webp" alt="">
+            <h3>Fystart</h3>
+            <p>🍏 一个简洁的起始页，为你所想</p>
+          </a>
+          <a class="element" href="https://chatnio.net">
+            <img src="/project/chatnio.png" alt="">
+            <h3>Chat Nio</h3>
+            <p>👋 一个简洁、美观、轻量的开源 AI 聊天助手</p>
+          </a>
           <a class="element" href="https://stats.deeptrain.net">
             <img src="/project/stats.webp" alt="">
             <h3>Code Statistic</h3>
             <p>⚡ 动态生成你的 GitHub 统计卡片！</p>
-          </a>
-          <a class="element" href="https://fystart.cn">
-            <img src="/project/fystart.webp" alt="">
-            <h3>Fystart</h3>
-            <p>🍏 一个简洁的起始页，为你所想</p>
           </a>
           <a class="element" href="https://github.com/zmh-program/web-chatgpt-qq-bot">
             <img src="/project/webchatgpt.webp" alt="" style="border-radius: 12px">
@@ -131,11 +137,6 @@ function scroll() {
             <h3>Light Notes</h3>
             <p>📝 一个极简、美观、多端同步的轻量化在线便签</p>
           </a>
-          <a class="element" href="https://nio.fystart.cn">
-            <img src="/project/chatnio.png" alt="">
-            <h3>Chat Nio</h3>
-            <p>👋 一个简洁、美观、轻量的开源 AI 聊天助手</p>
-          </a>
           <a class="element" href="https://github.com/zmh-program/kylin-go">
             <h3>Kylin Go</h3>
             <div style="height: 6px" />
@@ -149,32 +150,13 @@ function scroll() {
         <p>感谢你们的支持！</p>
         <div class="box">
           <div class="element friend">
-            <img src="/friend/linwin.webp" alt="">
-            <h3>Linwin-Cloud</h3>
-            <p>开源软件贡献者。专注网络安全和计算机开源软件。擅长社会工程学。初二，热爱开源的开发者。著有多款开源软件。对于计算机网络安全有独特的见解。擅长进行社会工程学，善于对钓鱼网站的开发，也擅长Linux运维，懂得Linux服务器维护和网站。Java造诣极深，非常擅长前端开发。</p>
-            <div class="social">
-              <a href="https://github.com/Linwin-Cloud"><github /><span>Linwin-Cloud</span></a>
-              <a href="https://space.bilibili.com/1012391123"><bilibili /><span>LinWinCloud 联沃云</span></a>
-            </div>
-          </div>
-          <div class="element friend">
-            <img src="/friend/wmz1024.webp" alt="">
-            <h3>wmz1024</h3>
-            <p>精通前后端（<span>Vue, React, Next, Golang, PHP, Python</span> 等），<br>对云开发，云原生，云计算，网络有独特的见解。<br>目前在读小学五年级的一个小学生，<br>是一个小小白（小白：指全栈）</p>
-            <div class="social">
-              <a href="https://github.com/wmz1024"><github /><span>wmz1024</span></a>
-              <a href="https://space.bilibili.com/403083793"><bilibili /><span>wmz1024</span></a>
-              <a href="https://wmza.cn"><site /><span>wmza.cn</span></a>
-            </div>
-          </div>
-          <div class="element friend">
             <img src="/friend/sh1n3zz.webp" alt="">
             <h3>Sh1n3zZ</h3>
             <p>
-              全能型人才<br>
-              对网络攻防，网络安全有极高造诣<br><br>
-              晞云（珠海市晞云云科技有限公司）创始人<br>
-              <span>LightXi Cloud</span> 创始人
+              Baka zZ！<br>
+              擅长 C / C++<br>
+              对云计算，网络安全有较深造诣<br><br>
+              晞云（珠海市晞云云科技有限公司）の 首席执行官
             </p>
             <div class="social">
               <a href="https://github.com/Sh1n3zZ"><github /><span>Sh1n3zZ</span></a>
@@ -182,25 +164,20 @@ function scroll() {
             </div>
           </div>
           <div class="element friend">
-            <img src="/friend/kernel.webp" alt="">
-            <h3>主核kernel</h3>
-            <p>
-              “创新是我们基因的一部分。”<br>
-              喜欢玩 <span>scratch / turbowarp</span><br>
-              对机器学习有一定研究<br>
-            </p>
+            <img src="/friend/wmz1024.webp" alt="">
+            <h3>wmz1024</h3>
+            <p>喜欢 Web 开发</p>
             <div class="social">
-              <a href="https://space.bilibili.com/545450739"><bilibili /><span>主核kernel</span></a>
-              <a href="https://hujiarong.top"><site /><span>hujiarong.top</span></a>
+              <a href="https://github.com/wmz1024"><github /><span>wmz1024</span></a>
+              <a href="https://space.bilibili.com/403083793"><bilibili /><span>wmz1024</span></a>
+              <a href="https://wmza.cn"><site /><span>wmza.cn</span></a>
             </div>
           </div>
           <div class="element friend">
             <img src="/friend/creeper.webp" alt="">
             <h3>航小怕</h3>
             <p>
-              小学生，在学高数（<br><br>
-              “我偏向竞赛的，最多就拿了个 <span>CSP-J</span> 广西一等奖<br>
-              我会一点 <span>easyx</span> 和 <span>ue5, unity</span> 的游戏制作（真的一点点）”<br>
+              “我会一点 <span>easyx</span> 和 <span>ue5, unity</span> 的游戏制作”<br>
               ——来自航小怕
             </p>
             <div class="social">
@@ -212,25 +189,21 @@ function scroll() {
             <img src="/friend/what.webp" alt="">
             <h3>what</h3>
             <p>
-              擅长 <span>Vue</span>，原生前端，<span>NodeJS</span> 开发<br>
-              <span>CloudBase</span> 开发<br>
-              <a href="https://40code.com"><span>40code</span></a> 站长<br>
+              <span>前端 / Nodejs</span> 开发<br>
             </p>
             <div class="social">
               <a href="https://github.com/52black"><github /><span>52black</span></a>
-              <a href="https://space.bilibili.com/444298188"><bilibili /><span>40code社区</span></a>
+              <a href="https://space.bilibili.com/444298188"><bilibili /><span>40code</span></a>
               <a href="https://40code.com"><site /><span>40code.com</span></a>
             </div>
           </div>
           <div class="element friend">
-            <img src="/friend/shenjack.webp" alt="">
-            <h3>shenjack</h3>
-            <p>
-              <span>happy lazy HWS with me</span>
-            </p>
+            <img src="/friend/linwin.webp" alt="">
+            <h3>Linwin-Cloud</h3>
+            <p>开源软件贡献者，热爱开源的开发者。<br>初三，擅长 Java 开发和 Linux。</p>
             <div class="social">
-              <a href="https://github.com/shenjackyuanjie"><github /><span>shenjackyuanjie</span></a>
-              <a href="https://space.bilibili.com/423825607"><bilibili /><span>shenjack_</span></a>
+              <a href="https://github.com/Linwin-Cloud"><github /><span>Linwin-Cloud</span></a>
+              <a href="https://space.bilibili.com/1012391123"><bilibili /><span>LinWinCloud 联沃云</span></a>
             </div>
           </div>
           <div class="element friend">
@@ -623,10 +596,11 @@ main {
   border-radius: 50%;
 }
 .social {
-  margin-top: 10px;
+  margin-top: auto;
   display: flex;
   flex-direction: column;
   gap: 4px;
+  margin-bottom: 24px;
 }
 .social a {
   background-color: inherit !important;
