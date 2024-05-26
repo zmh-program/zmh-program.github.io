@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -67,14 +67,35 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "scale-down": {
+          from: { transform: "scale(1.1)" },
+          to: { transform: "scale(1)" },
+        },
+        "ping-light": {
+          "0%": { boxShadow: "0 0 0 4px rgba(255, 255, 255, 0.1)" },
+          "50%": { boxShadow: "0 0 0 4px rgba(255, 255, 255, 0.15)" },
+          "100%": { boxShadow: "0 0 0 4px rgba(255, 255, 255, 0.1)" },
+        },
+        "saturated-pulse": {
+          "0%": { filter: "saturate(100%)" },
+          "50%": { filter: "saturate(150%)" },
+          "100%": { filter: "saturate(100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "scale-down": "scale-down 1s ease-in-out",
+        "ping-light": "ping-light 1.5s cubic-bezier(0, 0, 0.2, 1) infinite",
+        "saturated-pulse": "saturated-pulse 5s ease-in-out infinite",
+
+        // merge with saturated-pulse and scale-down
+        "saturated-scale-down":
+          "saturated-pulse 10s ease-in-out infinite, scale-down 1s ease-in-out",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
