@@ -23,6 +23,8 @@ const config = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
+        "background-hover": "hsl(var(--background-hover))",
+        "background-active": "hsl(var(--background-active))",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -39,6 +41,10 @@ const config = {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
+        },
+        "muted-hover": {
+          DEFAULT: "hsl(var(--muted-hover))",
+          foreground: "hsl(var(--muted-hover-foreground))",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
