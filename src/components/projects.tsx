@@ -1,7 +1,4 @@
-import { Button } from "@/components/ui/button";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import Link from "next/link";
-import Image from "next/image";
 import React from "react";
 import {cn} from "@/lib/utils";
 import {Star} from "lucide-react";

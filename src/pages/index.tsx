@@ -1,11 +1,12 @@
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import {ChevronDown, Star} from "lucide-react";
+import {ChevronDown, HandHeart, Star} from "lucide-react";
 import { Typing } from "@/components/typing";
 import Title from "@/components/title";
 import Name from "@/components/name";
 import Projects from "@/components/projects";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -189,6 +190,12 @@ function ProjectSection() {
 function Footer() {
   return (
     <div className={`footer mt-4 text-center text-sm`}>
+      <div className={`mb-2 text-secondary`}>
+        <Link href={"/donate"}>
+          <HandHeart className={`w-4 h-4 inline-block mr-1`}/>
+          捐助
+        </Link>
+      </div>
       <div className={`mb-2 text-secondary`}>
         <a href="https://beian.miit.gov.cn" target="_blank">
           <Image
