@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, HandHeart, Star } from "lucide-react";
+import {ChevronDown, HandHeart, Mail} from "lucide-react";
 import { Typing } from "@/components/typing";
 import Title from "@/components/title";
 import Name from "@/components/name";
@@ -65,6 +65,7 @@ export default function Home() {
       <div id={`section`} className={`w-full h-fit bg-background pt-4 pb-6`}>
         <ProductSection />
         <ProjectSection />
+        <TechStackSection />
         <Footer />
       </div>
     </main>
@@ -206,14 +207,34 @@ function ProjectSection() {
   );
 }
 
+function TechStackSection() {
+  return (
+    <div
+      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20`}
+    >
+      <Title title={"Tech Stack"} subtitle={"技术栈"} tags={[
+        "前端", "后端", "网络安全", "机器学习", "大数据", "云计算"
+      ]} />
+
+      <img src="https://skillicons.dev/icons?i=c,go,rust,python,arduino,lua,nodejs,php,react,next,vue,nuxt,angular,express,tailwindcss,redux,bootstrap,html,css,js,jquery,ts,less,scss,fastapi,django,flask,pytorch,tensorflow,opencv,qt,electron,tauri,threejs&perline=12" alt="Tech Stack" className={`max-w-[80vw] mt-4`} />
+      {/*<img src="https://skillicons.dev/icons?i=mysql,sqlite,redis,postgresql,rabbitmq,docker,kubernetes,nginx,git,npm,pnpm,yarn,vite,vitest,webpack,babel,cmake,anaconda,github,grafana,githubactions,jenkins,figma,aws,azure,gcp,cloudflare,vercel,netlify,heroku&perline=12" alt="Tools I Use" className={`max-w-[80vw] mt-6`} />*/}
+    </div>
+  );
+}
+
 function Footer() {
   return (
-    <div className={`footer mt-4 text-center text-sm`}>
-      <div className={`mb-2 text-secondary`}>
+    <div className={`footer pt-6 text-center text-sm bg-[#ffffff07]`}>
+      <div className={`flex flex-row items-center justify-center mb-2 text-secondary`}>
         <Link href={"/donate"}>
-          <HandHeart className={`w-4 h-4 inline-block mr-1`} />
+          <HandHeart className={`w-4 h-4 inline-block mr-1`}/>
           捐助
         </Link>
+        <p className={`mx-1 text-secondary opacity-80 select-none translate-y-[1px]`}>|</p>
+        <a href={"mailto:zmh@lightxi.com"}>
+          <Mail className={`w-4 h-4 inline-block mr-1`}/>
+          商务联系
+        </a>
       </div>
       <div className={`mb-2 text-secondary`}>
         <a href="https://beian.miit.gov.cn" target="_blank">
@@ -234,7 +255,7 @@ function Footer() {
           description={"Nothing is impossible."}
           avatar={"/avatar.webp"}
           avatarFallback={"ZM"}
-          contact={"LightXi CTO"}
+          contact={"zmh@lightxi.com"}
         />
         . All rights reserved.
       </div>

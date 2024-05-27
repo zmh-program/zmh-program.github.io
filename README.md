@@ -12,6 +12,16 @@
 
 ### Tech Stack
 
-- [x] 🍇 Next.js
+- [x] 🍇 Next.js (Static Export)
 - [x] 🍒 TypeScript
 - [x] 🍑 Tailwind CSS
+
+
+### LightHouse Benchmark
+![Lighthouse Benchmark](/docs/lighthouse.png)
+
+### Screen Shot
+![Image](/docs/screenshot-1.png)
+![Image](/docs/screenshot-2.png)
+![Image](/docs/screenshot-3.png)
+![Image](/docs/screenshot-4.png)
