@@ -37,7 +37,7 @@ export default function Home() {
           <div className={`mt-8`}>
             <Typing
               content={`Nothing is impossible.`}
-              className={`text-xl rounded-md bg-[#ffffff1f] px-2.5 py-2 backdrop-blur-sm text-white`}
+              className={`text-xl rounded-md whitespace-nowrap bg-[#ffffff1f] px-2.5 py-2 backdrop-blur-sm text-white`}
               typingSpeed={150}
               keyboardSeed={2}
               keyboardStay={2}
@@ -56,6 +56,7 @@ export default function Home() {
               const section = document.getElementById("section");
               section?.scrollIntoView({ behavior: "smooth" });
             }}
+            aria-label={`scroll down`}
           >
             <ChevronDown className={`w-4 h-4`} />
           </Button>
