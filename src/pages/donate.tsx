@@ -38,12 +38,12 @@ export default function Donate() {
           className={`px-4 grid grid-cols-1 gap-4 md:grid-cols-2 mx-auto w-fit h-fit`}
         >
           <img
-            src={`/donate/wechat.png`}
+            src={`/donate/wechat.webp`}
             alt={`wechat`}
             className={`rounded-md w-40 h-56`}
           />
           <img
-            src={`/donate/alipay.jpg`}
+            src={`/donate/alipay.webp`}
             alt={`alipay`}
             className={`rounded-md w-40 h-56`}
           />

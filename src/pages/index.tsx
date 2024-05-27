@@ -129,7 +129,7 @@ function ProjectSection() {
         data={[
           {
             title: "Chat Nio",
-            avatar: "chatnio.png",
+            avatar: "chatnio.webp",
             description: "🚀 功能强大 设计精美 易于使用的 AIGC 一站式解决方案",
             tags: [
               "K8s",
@@ -162,7 +162,7 @@ function ProjectSection() {
           },
           {
             title: "Light Notes",
-            avatar: "lightnotes.ico",
+            avatar: "lightnotes.webp",
             description:
               "📝 一个极简、美观、多端同步的轻量化在线便签, 支持 Markdown 语法, 支持多设备同步, 支持匿名便签",
             tags: ["Go", "Vue", "Serverless"],
