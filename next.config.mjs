@@ -10,7 +10,29 @@ const nextConfig = withPWA({
   output: "export",
   images: {
     unoptimized: true,
-  }
+  },
+  async headers() {
+    return [
+      {
+        source: '/',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'no-cache',
+          },
+        ],
+      },
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
 });
 
 export default nextConfig;
