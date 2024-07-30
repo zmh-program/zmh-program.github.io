@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import {ChevronDown, HandHeart, Mail} from "lucide-react";
+import { ChevronDown, HandHeart, Mail, Quote } from "lucide-react";
 import { Typing } from "@/components/typing";
 import Title from "@/components/title";
 import Name from "@/components/name";
@@ -19,7 +19,7 @@ export default function Home() {
           alt="background"
           layout={"fill"}
           className={
-            "top-0 left-0 w-full h-full object-cover filter brightness-90 animate-scale-down"
+            "top-0 left-0 w-full h-full object-cover filter brightness-90 animate-saturated-pulse"
           }
         />
         <div
@@ -62,7 +62,7 @@ export default function Home() {
           </Button>
         </div>
       </div>
-      <div id={`section`} className={`w-full h-fit bg-background pt-4 pb-6`}>
+      <div id={`section`} className={`w-full h-fit bg-background pt-4`}>
         <ProductSection />
         <ProjectSection />
         <TechStackSection />
@@ -75,14 +75,20 @@ export default function Home() {
 function ProductSection() {
   return (
     <div
-      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-8 pb-20`}
+      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-8 pb-12`}
     >
       <Title
         title={"About"}
         subtitle={"关于"}
         tags={["INTJ", "CTO", "全栈开发", "开源爱好者"]}
       />
-      <div className={`text-md mt-2 text-center max-w-[60vw] leading-8`}>
+      <div className={`stats flex flex-col max-w-[80vw]`}>
+        <img
+          src="https://trendshift.io/api/badge/repositories/6369"
+          alt="GitHub: #1 Repo of The Day"
+        />
+      </div>
+      <div className={`text-md mt-6 text-center max-w-[60vw] leading-8`}>
         我是{" "}
         <Name
           name={"@zmh-program"}
@@ -105,16 +111,11 @@ function ProductSection() {
         <br />
         生于 2009 年，七年编程生涯，感慨万千。
       </div>
-      <div className={`stats mt-6 flex flex-col max-w-[80vw]`}>
-        <img
-          src="https://stats.deeptrain.net/user/zmh-program"
-          alt="Zmh-Program's Github Stats"
-        />
-        <img
-          className={`mt-2`}
-          src="https://stats.deeptrain.net/user/Deeptrain-Community"
-          alt="Deeptrain's Github Stats"
-        />
+      <div
+        className={`flex flex-row mt-4 items-center border bg-muted-foreground/10 cursor-pointer duration-200 transition hover:bg-muted-foreground/15 select-none px-3 py-1.5 rounded-md shadow`}
+      >
+        <Quote className={`w-3.5 h-3.5 mr-2 shrink-0`} />
+        Nothing is impossible.
       </div>
     </div>
   );
@@ -123,7 +124,7 @@ function ProductSection() {
 function ProjectSection() {
   return (
     <div
-      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20 bg-[#ffffff07]`}
+      className={`relative inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20 bg-[#ffffff07]`}
     >
       <Title title={"Projects"} subtitle={"我的项目"} />
       <Projects
@@ -178,10 +179,17 @@ function ProjectSection() {
             link: "https://github.com/zmh-program/web-chatgpt-qq-bot",
           },
           {
+            title: "Next Whois UI",
+            description:
+              "🧪 开源、轻量、简洁、美观的强大 Whois 查询工具, 支持域名、IPv4、IPv6、ASN、CIDR 等查询",
+            tags: ["Next.js", "TypeScript", "Whois", "Edge Computing"],
+            link: "https://github.com/zmh-program/next-whois-ui",
+          },
+          {
             title: "Lyrify",
             avatar: "lyrify.webp",
             description:
-              "🔍 聚合翻译平台, 结合多种翻译引擎, 提供翻译结果对比等功能",
+              "🔍 聚合翻译平台, 支持多种翻译引擎同时翻译, 支持多种翻译结果展示和翻译结果对比",
             tags: ["Next.js", "TypeScript", "Tailwind CSS"],
             link: "https://github.com/SIPC/Lyrify",
           },
@@ -193,16 +201,9 @@ function ProjectSection() {
             tags: ["Go", "AST", "Lexer", "Interpreter"],
             link: "https://github.com/zmh-program/kylin-go",
           },
-          {
-            title: "Vokkot",
-            avatar: "vokkot.webp",
-            description:
-              "📦 [WIP] 你的下一代文件存储分发系统, 为开发者提供简单、高效、安全的文件存储和分发服务",
-            tags: ["Rust", "Next.js", "S3", "CDN"],
-            link: "https://github.com/zmh-program/vokkot",
-          },
         ]}
       />
+      <div className={`absolute right-4 bottom-4 w-6 h-6`} />
     </div>
   );
 }
@@ -212,11 +213,17 @@ function TechStackSection() {
     <div
       className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20`}
     >
-      <Title title={"Tech Stack"} subtitle={"技术栈"} tags={[
-        "前端", "后端", "网络安全", "机器学习", "大数据", "云计算"
-      ]} />
+      <Title
+        title={"Tech Stack"}
+        subtitle={"技术栈"}
+        tags={["前端", "后端", "网络安全", "机器学习", "大数据", "云计算"]}
+      />
 
-      <img src="https://skillicons.dev/icons?i=c,go,rust,python,arduino,lua,nodejs,php,react,next,vue,nuxt,angular,express,tailwindcss,redux,bootstrap,html,css,js,jquery,ts,less,scss,fastapi,django,flask,pytorch,tensorflow,opencv,qt,electron,tauri,threejs&perline=12" alt="Tech Stack" className={`max-w-[80vw] mt-4`} />
+      <img
+        src="https://skillicons.dev/icons?i=c,go,rust,python,arduino,lua,nodejs,php,react,next,vue,nuxt,angular,express,tailwindcss,redux,bootstrap,html,css,js,jquery,ts,less,scss,fastapi,django,flask,pytorch,tensorflow,opencv,qt,electron,tauri,threejs&perline=12"
+        alt="Tech Stack"
+        className={`max-w-[80vw] mt-4`}
+      />
       {/*<img src="https://skillicons.dev/icons?i=mysql,sqlite,redis,postgresql,rabbitmq,docker,kubernetes,nginx,git,npm,pnpm,yarn,vite,vitest,webpack,babel,cmake,anaconda,github,grafana,githubactions,jenkins,figma,aws,azure,gcp,cloudflare,vercel,netlify,heroku&perline=12" alt="Tools I Use" className={`max-w-[80vw] mt-6`} />*/}
     </div>
   );
@@ -224,15 +231,21 @@ function TechStackSection() {
 
 function Footer() {
   return (
-    <div className={`footer pt-6 text-center text-sm bg-[#ffffff07]`}>
-      <div className={`flex flex-row items-center justify-center mb-2 text-secondary`}>
+    <div className={`footer py-6 text-center text-sm bg-[#ffffff07]`}>
+      <div
+        className={`flex flex-row items-center justify-center mb-2 text-secondary`}
+      >
         <Link href={"/donate"}>
-          <HandHeart className={`w-4 h-4 inline-block mr-1`}/>
+          <HandHeart className={`w-4 h-4 inline-block mr-1`} />
           捐助
         </Link>
-        <p className={`mx-1 text-secondary opacity-80 select-none translate-y-[1px]`}>|</p>
+        <p
+          className={`mx-1 text-secondary opacity-80 select-none translate-y-[1px]`}
+        >
+          |
+        </p>
         <a href={"mailto:zmh@lightxi.com"}>
-          <Mail className={`w-4 h-4 inline-block mr-1`}/>
+          <Mail className={`w-4 h-4 inline-block mr-1`} />
           商务联系
         </a>
       </div>

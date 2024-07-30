@@ -8,7 +8,7 @@ type ProjectType = {
   description: string;
   tags: (string | React.ReactElement)[];
   link: string;
-  avatar: string;
+  avatar?: string;
   stars?: string;
 };
 
@@ -65,7 +65,7 @@ function Project({
         <div className="bg-background-hover shadow transition-all select-none rounded-full p-1.5 absolute top-4 right-4">
           <img
             loading={"lazy"}
-            src={`/project/${avatar}`}
+            src={avatar ? `/project/${avatar}` : "/avatar.webp"}
             alt={title}
             className="rounded-full w-10 h-10"
           />
