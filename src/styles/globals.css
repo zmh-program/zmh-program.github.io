@@ -74,6 +74,7 @@ html, body, #__next, main {
   margin: 0;
   padding: 0;
   scrollbar-width: none;
+  overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
 }
 
