@@ -7,7 +7,7 @@ import Name from "@/components/name";
 import Projects from "@/components/projects";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import WordPullUp from "@/components/magicui/word-pull-up";
 import Meteors from "@/components/magicui/meteors";
@@ -20,7 +20,7 @@ export default function Home() {
     <main className={inter.className}>
       <Meteors />
       <ScrollArea className={`w-full h-full`}>
-        <div className={`p-6 max-w-[620px] mx-auto`}>
+        <div className={`flex flex-col space-y-4 max-w-[620px] mx-auto`}>
           <IntroSection />
           <ProjectSection />
           <TechStackSection />
@@ -124,88 +124,71 @@ function IntroSection() {
 
 function ProjectSection() {
   return (
-    <div
-      className={`relative inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20 bg-[#ffffff07]`}
-    >
-      <Title title={"Projects"} subtitle={"我的项目"} />
+    <Card className={`relative w-full h-fit p-6`}>
+      <CardTitle>Project Experience</CardTitle>
       <Projects
         data={[
           {
             title: "Chat Nio",
             avatar: "chatnio.webp",
-            description: "🚀 功能强大 设计精美 易于使用的 AIGC 一站式解决方案",
+            description: "🚀 Next Generation AI One-Stop Internationalization Solution.",
             tags: [
               "K8s",
               "Go",
+              "Rust",
               "React",
               "TypeScript",
               "WebSocket",
               "PWA",
-              "Tauri",
-              "AIGC",
             ],
             link: "https://chatnio.com",
-            stars: "2k+",
+            stars: "3k+",
           },
           {
             title: "FyStart",
             avatar: "fystart.webp",
             description:
-              "🍏 极目起始页, 简洁高效的开源起始页, 为您提供干净的搜索体验, 支持智能搜索建议、断网离线访问等高级功能",
+              "🍏 AI-powered beautiful and lightweight start page. Features cloud sync, PWA offline access, and various components including quotes, toolbox, cards, search suggestions, and translations.",
             tags: ["Go", "Vue", "PWA", "Service Worker"],
             link: "https://github.com/Deeptrain-Community/fystart",
+            stars: "0.1k",
+          },
+          {
+            title: "Next Whois UI",
+            description:
+              "🧪 Your Next-Gen Whois Lookup Tool With Modern UI. Support Domain/IPv4/IPv6/ASN/CIDR Whois Lookup And Powerful Features. ",
+            tags: ["Next.js", "TypeScript", "Whois Lookup"],
+            link: "https://github.com/zmh-program/next-whois-ui",
+            stars: "0.2k",
           },
           {
             title: "Code Statistic",
             avatar: "stats.webp",
             description:
-              " ⚡ 动态生成你的 GitHub 统计卡片！支持 用户/组织/仓库/贡献者/PR/Issue/Release 卡片, 明暗主题切换等功能",
-            tags: ["PHP", "Go", "JavaScript", "SVG", "GitHub"],
+              "⚡ Dynamically generate your GitHub stat cards! Featuring User, Repo, Contributor, Release, Issue, and PR Cards. Supports dark mode and API integration. Explore the possibilities!",
+            tags: ["PHP", "Go", "JavaScript", "Edge Computing"],
             link: "https://stats.deeptrain.net",
           },
           {
-            title: "Light Notes",
-            avatar: "lightnotes.webp",
-            description:
-              "📝 一个极简、美观、多端同步的轻量化在线便签, 支持 Markdown 语法, 支持多设备同步, 支持匿名便签",
-            tags: ["Go", "Vue", "Serverless"],
-            link: "https://notes.lightxi.com",
-          },
-          {
-            title: "Web ChatGPT QQ Bot",
+            title: "Web Mirai Panel",
             avatar: "webchatgpt.webp",
             description:
-              "🤖 图形化界面一键配置 ChatGPT Mirai QQ Bot，内置终端，文件上传，监控，鉴权，自定义设置，检测 Docker 容器状态等功能",
-            tags: ["Python", "Vue", "Mirai", "Electron", "Docker"],
+              "🤖 Web UI of ChatGPT Mirai Bot, multi-instance management support, conf editing, health check, terminal execution, support for password access.",
+            tags: ["Python", "Vue", "Mirai", "Docker Core"],
             link: "https://github.com/zmh-program/web-chatgpt-qq-bot",
-          },
-          {
-            title: "Next Whois UI",
-            description:
-              "🧪 开源、轻量、简洁、美观的强大 Whois 查询工具, 支持域名、IPv4、IPv6、ASN、CIDR 等查询",
-            tags: ["Next.js", "TypeScript", "Whois", "Edge Computing"],
-            link: "https://github.com/zmh-program/next-whois-ui",
+            stars: "0.2k",
           },
           {
             title: "Lyrify",
             avatar: "lyrify.webp",
             description:
-              "🔍 聚合翻译平台, 支持多种翻译引擎同时翻译, 支持多种翻译结果展示和翻译结果对比",
+              "🔍 Aggregated translation platform, supports simultaneous translation with multiple translation engines, offers various translation result displays and comparison of translation results",
             tags: ["Next.js", "TypeScript", "Tailwind CSS"],
             link: "https://github.com/SIPC/Lyrify",
           },
-          {
-            title: "Kylin Go",
-            avatar: "kylingo.webp",
-            description:
-              "🐉 一款基于 Golang 编写的跨平台的编程语言。支持国际化 AST Transformer。面相过程，脚本语言。",
-            tags: ["Go", "AST", "Lexer", "Interpreter"],
-            link: "https://github.com/zmh-program/kylin-go",
-          },
         ]}
       />
-      <div className={`absolute right-4 bottom-4 w-6 h-6`} />
-    </div>
+    </Card>
   );
 }
 

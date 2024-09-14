@@ -16,7 +16,11 @@ export const Meteors = ({ number = 20 }: MeteorsProps) => {
     const updateMeteorStyles = () => {
       const styles = [...new Array(number)].map(() => ({
         top: -5,
-        left: Math.floor(Math.random() * Math.min(window.innerWidth, document.documentElement.clientWidth)) + "px",
+        left:
+          Math.floor(
+            Math.random() *
+              Math.min(window.innerWidth, document.documentElement.clientWidth),
+          ) + "px",
         animationDelay: Math.random() * 1 + 0.2 + "s",
         animationDuration: Math.floor(Math.random() * 8 + 2) + "s",
       }));
@@ -24,10 +28,10 @@ export const Meteors = ({ number = 20 }: MeteorsProps) => {
     };
 
     updateMeteorStyles();
-    window.addEventListener('resize', updateMeteorStyles);
+    window.addEventListener("resize", updateMeteorStyles);
 
     return () => {
-      window.removeEventListener('resize', updateMeteorStyles);
+      window.removeEventListener("resize", updateMeteorStyles);
     };
   }, [number]);
 
