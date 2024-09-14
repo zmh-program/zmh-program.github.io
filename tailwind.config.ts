@@ -23,8 +23,6 @@ const config = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
-        "background-hover": "hsl(var(--background-hover))",
-        "background-active": "hsl(var(--background-active))",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -41,10 +39,6 @@ const config = {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
-        },
-        "muted-hover": {
-          DEFAULT: "hsl(var(--muted-hover))",
-          foreground: "hsl(var(--muted-hover-foreground))",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
@@ -73,31 +67,25 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "scale-down": {
-          from: { transform: "scale(1.1)" },
-          to: { transform: "scale(1)" },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
         },
-        "ping-light": {
-          "0%": { boxShadow: "0 0 0 4px rgba(255, 255, 255, 0.1)" },
-          "50%": { boxShadow: "0 0 0 4px rgba(255, 255, 255, 0.15)" },
-          "100%": { boxShadow: "0 0 0 4px rgba(255, 255, 255, 0.1)" },
-        },
-        "saturated-pulse": {
-          "0%": { filter: "saturate(100%)" },
-          "50%": { filter: "saturate(150%)" },
-          "100%": { filter: "saturate(100%)" },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "scale-down": "scale-down 1s ease-in-out",
-        "ping-light": "ping-light 1.5s cubic-bezier(0, 0, 0.2, 1) infinite",
-        "saturated-pulse": "saturated-pulse 5s ease-in-out infinite",
-
-        // merge with saturated-pulse and scale-down
-        "saturated-scale-down":
-          "saturated-pulse 10s ease-in-out infinite, scale-down 1s ease-in-out",
+        meteor: "meteor 5s linear infinite",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
     },
   },

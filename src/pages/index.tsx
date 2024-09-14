@@ -1,122 +1,123 @@
 import { Inter } from "next/font/google";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { ChevronDown, HandHeart, Mail, Quote } from "lucide-react";
+import { Github, Mail, Quote, Twitter } from "lucide-react";
 import { Typing } from "@/components/typing";
 import Title from "@/components/title";
 import Name from "@/components/name";
 import Projects from "@/components/projects";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { Card, CardContent } from "@/components/ui/card";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import WordPullUp from "@/components/magicui/word-pull-up";
+import Meteors from "@/components/magicui/meteors";
+import { BorderBeam } from "@/components/magicui/border-beam";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <main className={inter.className}>
-      <div className={`relative w-full h-full select-none`}>
-        <Image
-          src="/background.webp"
-          alt="background"
-          layout={"fill"}
-          className={
-            "top-0 left-0 w-full h-full object-cover filter brightness-90 animate-saturated-pulse"
-          }
+      <Meteors />
+      <ScrollArea className={`w-full h-full`}>
+        <div className={`p-6 max-w-[620px] mx-auto`}>
+          <IntroSection />
+          <ProjectSection />
+          <TechStackSection />
+        </div>
+        <Footer />
+      </ScrollArea>
+    </main>
+  );
+}
+
+function IntroSection() {
+  return (
+    <div className={`flex flex-col items-center justify-center`}>
+      <div className="mt-4 border p-2 rounded-md flex items-center w-fit backdrop-blur-sm mb-2">
+        <Quote className="w-3 h-3 mr-1.5 text-foreground" />
+        <Typing
+          content="Nothing is impossible."
+          className="text-sm text-foreground"
+          typingSpeed={150}
+          keyboardSeed={2}
+          keyboardStay={2}
         />
+      </div>
+      <Card
+        className={`relative p-4 rounded-lg w-full h-fit flex flex-col pt-6 text-center md:text-left`}
+      >
+        <BorderBeam />
         <div
-          className={`absolute flex flex-col items-center top-[40%] left-[50%] transform translate-x-[-50%] translate-y-[-50%]`}
+          className={`flex flex-col md:flex-row items-center justify-center mb-6`}
         >
-          <div className={"w-fit h-fit"}>
+          <div className={"w-20 h-20 mr-6"}>
             <Image
               width={80}
               height={80}
               src="/avatar.webp"
               alt="avatar"
-              className={`saturate-150 rounded-md border-4 border-[#ffffff2f]`}
+              className={`rounded-full`}
             />
           </div>
-          <div className={`mt-8`}>
-            <Typing
-              content={`Nothing is impossible.`}
-              className={`text-xl rounded-md whitespace-nowrap bg-[#ffffff1f] px-2.5 py-2 backdrop-blur-sm text-white`}
-              typingSpeed={150}
-              keyboardSeed={2}
-              keyboardStay={2}
+          <div className={`flex flex-col justify-center`}>
+            <h1 className={`text-2xl font-semibold`}>ProgramZmh</h1>
+            <WordPullUp
+              className={`text-base md:text-left font-normal mt-1`}
+              words={"15 y.o. / Co-Founder @LightXi Inc."}
             />
-          </div>
-        </div>
-        <div
-          className={`absolute bottom-[10%] left-[50%] transform translate-x-[-50%]`}
-        >
-          <Button
-            variant={`outline`}
-            size={`icon`}
-            className={`rounded-full animate-bounce animate-2s`}
-            onClick={() => {
-              // scroll to next section
-              const section = document.getElementById("section");
-              section?.scrollIntoView({ behavior: "smooth" });
-            }}
-            aria-label={`scroll down`}
-          >
-            <ChevronDown className={`w-4 h-4`} />
-          </Button>
-        </div>
-      </div>
-      <div id={`section`} className={`w-full h-fit bg-background pt-4`}>
-        <ProductSection />
-        <ProjectSection />
-        <TechStackSection />
-        <Footer />
-      </div>
-    </main>
-  );
-}
 
-function ProductSection() {
-  return (
-    <div
-      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-8 pb-12`}
-    >
-      <Title
-        title={"About"}
-        subtitle={"关于"}
-        tags={["INTJ", "CTO", "全栈开发", "开源爱好者"]}
-      />
-      <div className={`stats flex flex-col max-w-[80vw]`}>
-        <img
-          src="https://trendshift.io/api/badge/repositories/6369"
-          alt="GitHub: #1 Repo of The Day"
-        />
-      </div>
-      <div className={`text-md mt-6 text-center max-w-[60vw] leading-8`}>
-        我是{" "}
-        <Name
-          name={"@zmh-program"}
-          description={"Nothing is impossible."}
-          avatar={"/avatar.webp"}
-          avatarFallback={"ZM"}
-          contact={"LightXi CTO"}
-        />
-        ，全栈开发者，热爱创新，喜爱创造。
-        <br />
-        目前担任{" "}
-        <Name
-          name={"晞云"}
-          description={"珠海市晞云云科技有限公司"}
-          avatar={"/lightxi.webp"}
-          avatarFallback={"X"}
-          contact={"www.lightxi.com"}
-        />{" "}
-        CTO，致力于创新并提供优质的产品。
-        <br />
-        生于 2009 年，七年编程生涯，感慨万千。
-      </div>
-      <div
-        className={`flex flex-row mt-4 items-center border bg-muted-foreground/10 cursor-pointer duration-200 transition hover:bg-muted-foreground/15 select-none px-3 py-1.5 rounded-md shadow`}
-      >
-        <Quote className={`w-3.5 h-3.5 mr-2 shrink-0`} />
-        Nothing is impossible.
-      </div>
+            <div className="flex flex-wrap mt-2 justify-center">
+              <span className="px-2 py-1 m-1 text-xs font-medium rounded-md border bg-secondary/40 cursor-pointer transition hover:bg-secondary">
+                CTO
+              </span>
+              <span className="px-2 py-1 m-1 text-xs font-medium rounded-md border bg-secondary/40 cursor-pointer transition hover:bg-secondary">
+                INTJ
+              </span>
+              <span className="px-2 py-1 m-1 text-xs font-medium rounded-md border bg-secondary/40 cursor-pointer transition-all hover:bg-secondary">
+                Full Stack Developer
+              </span>
+              <span className="px-2 py-1 m-1 text-xs font-medium rounded-md border bg-secondary/40 cursor-pointer transition hover:bg-secondary">
+                Open Source Enthusiast
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="flex flex-col md:flex-row mb-4 justify-center items-center">
+            <a
+              href="https://trendshift.io/repositories/6369"
+              className="m-2 w-fit"
+            >
+              <img
+                src="https://trendshift.io/api/badge/repositories/6369"
+                alt="Chat Nio: #1 Repo Of The Day"
+              />
+            </a>
+            <a href="https://spark-lab.city" className="m-2 w-fit">
+              <img
+                src="https://spark-lab.city/api/badge?session=1&prize=1"
+                alt="Spark Lab S1 #1 Place"
+              />
+            </a>
+          </div>
+          <div className={`flex justify-center space-x-4 pr-0.5`}>
+            <Link
+              href="https://github.com/ProgramZmh"
+              target="_blank"
+              className={`ml-auto`}
+            >
+              <Github className={`w-5 h-5`} />
+            </Link>
+            <Link href="https://twitter.com/ProgramZmh" target="_blank">
+              <Twitter className={`w-5 h-5`} />
+            </Link>
+            <Link href="mailto:zmh@lightxi.com" target="_blank">
+              <Mail className={`w-5 h-5`} />
+            </Link>
+          </div>
+        </div>
+      </Card>
     </div>
   );
 }
@@ -231,25 +232,8 @@ function TechStackSection() {
 
 function Footer() {
   return (
-    <div className={`footer py-6 text-center text-sm bg-[#ffffff07]`}>
-      <div
-        className={`flex flex-row items-center justify-center mb-2 text-secondary`}
-      >
-        <Link href={"/donate"}>
-          <HandHeart className={`w-4 h-4 inline-block mr-1`} />
-          捐助
-        </Link>
-        <p
-          className={`mx-1 text-secondary opacity-80 select-none translate-y-[1px]`}
-        >
-          |
-        </p>
-        <a href={"mailto:zmh@lightxi.com"}>
-          <Mail className={`w-4 h-4 inline-block mr-1`} />
-          商务联系
-        </a>
-      </div>
-      <div className={`mb-2 text-secondary`}>
+    <div className={`footer py-6 text-center text-sm`}>
+      <div className={`mb-1`}>
         <a href="https://beian.miit.gov.cn" target="_blank">
           <Image
             src="/gov.webp"
@@ -261,17 +245,7 @@ function Footer() {
           鲁ICP备2022034318号-1
         </a>
       </div>
-      <div>
-        © 2021-present{" "}
-        <Name
-          name={"@zmh-program"}
-          description={"Nothing is impossible."}
-          avatar={"/avatar.webp"}
-          avatarFallback={"ZM"}
-          contact={"zmh@lightxi.com"}
-        />
-        . All rights reserved.
-      </div>
+      <div>© 2021-present @zmh-program. All rights reserved.</div>
     </div>
   );
 }
