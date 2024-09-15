@@ -1,9 +1,7 @@
 import { Inter } from "next/font/google";
 import Image from "next/image";
-import { Github, Mail, Quote, Twitter } from "lucide-react";
+import { ArrowRight, Github, Mail, Quote, Twitter } from "lucide-react";
 import { Typing } from "@/components/typing";
-import Title from "@/components/title";
-import Name from "@/components/name";
 import Projects from "@/components/projects";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -24,6 +22,7 @@ export default function Home() {
         <div className={`flex flex-col p-6 space-y-4 max-w-[620px] mx-auto`}>
           <IntroSection />
           <SkillSection />
+          <PartnerSection />
           <ProjectSection />
         </div>
         <Footer />
@@ -134,15 +133,7 @@ function ProjectSection() {
             avatar: "chatnio.webp",
             description:
               "🚀 Next Generation AI One-Stop Internationalization Solution.",
-            tags: [
-              "K8s",
-              "Go",
-              "Rust",
-              "React",
-              "TypeScript",
-              "WebSocket",
-              "PWA",
-            ],
+            tags: ["K8s", "Go", "React", "TypeScript", "WebSocket", "PWA"],
             link: "https://chatnio.com",
             stars: "3k+",
           },
@@ -168,7 +159,7 @@ function ProjectSection() {
             avatar: "stats.webp",
             description:
               "⚡ Dynamically generate your GitHub stat cards! Featuring User, Repo, Contributor, Release, Issue, and PR Cards. Supports dark mode and API integration. Explore the possibilities!",
-            tags: ["PHP", "Go", "JavaScript", "Edge Computing"],
+            tags: ["Go", "PHP", "JavaScript", "Edge Computing"],
             link: "https://stats.deeptrain.net",
           },
           {
@@ -185,11 +176,55 @@ function ProjectSection() {
             avatar: "lyrify.webp",
             description:
               "🔍 Aggregated translation platform, supports simultaneous translation with multiple translation engines, offers various translation result displays and comparison of translation results",
-            tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+            tags: ["Next.js", "TypeScript"],
             link: "https://github.com/SIPC/Lyrify",
           },
         ]}
       />
+    </Card>
+  );
+}
+
+function PartnerSection() {
+  const partners = [
+    {
+      name: "Sh1n3zZ",
+      logo: "/rakuyou.webp",
+      description: "BGP Player / Full Stack / Embedded / OIer / INFP",
+      quote: "看斜阳 洒落金光，恋此景 似琳琅",
+      url: "https://qaq.gs",
+    },
+  ];
+
+  return (
+    <Card className={`relative w-full h-fit p-6`}>
+      <CardTitle>My Partners</CardTitle>
+      <div className="mt-4 grid grid-cols-1 gap-4">
+        {partners.map((partner, index) => (
+          <Link key={index} href={partner.url} target="_blank">
+            <div className="group flex items-center p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+              <Image
+                src={partner.logo}
+                alt={`${partner.name} logo`}
+                width={80}
+                height={80}
+                className="rounded-lg w-16 h-16 mr-4"
+              />
+              <div>
+                <span className="text-lg font-medium">{partner.name}</span>
+                <p className="text-sm text-muted-foreground">
+                  {partner.description}
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  <Quote className="w-3 h-3 mr-1 inline-block" />
+                  {partner.quote}
+                </p>
+              </div>
+              <ArrowRight className="ml-auto mr-2 transition-all group-hover:translate-x-1 duration-300 text-muted-foreground w-4 h-4" />
+            </div>
+          </Link>
+        ))}
+      </div>
     </Card>
   );
 }

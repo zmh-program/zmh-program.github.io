@@ -17,14 +17,12 @@ type ProjectsProps = {
 };
 
 const lineGradients = [
-  "from-blue-500 to-purple-500",
+  "from-sky-500 to-blue-500",
   "from-green-500 to-yellow-500",
   "from-red-500 to-orange-500",
   "from-pink-500 to-purple-500",
-  "from-green-500 to-teal-500",
-  "from-red-500 to-pink-500",
+  "from-blue-500 to-purple-500",
   "from-yellow-500 to-orange-500",
-  "from-blue-500 to-indigo-500",
 ];
 
 function Projects({ data }: ProjectsProps) {
