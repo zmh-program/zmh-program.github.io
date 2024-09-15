@@ -23,8 +23,8 @@ export default function Home() {
       <ScrollArea className={`w-full h-full`}>
         <div className={`flex flex-col p-6 space-y-4 max-w-[620px] mx-auto`}>
           <IntroSection />
+          <SkillSection />
           <ProjectSection />
-          <TechStackSection />
         </div>
         <Footer />
       </ScrollArea>
@@ -194,7 +194,7 @@ function ProjectSection() {
   );
 }
 
-function TechStackSection() {
+function SkillSection() {
   const techIconsInner = ["c", "go", "rust", "flutter", "next", "nuxt", "ts"];
 
   const techIconsOuter = [
@@ -213,8 +213,7 @@ function TechStackSection() {
   const techIconsOuterDelay = 100 / techIconsOuter.length;
 
   const techCategories = [
-    "Frontend",
-    "Backend",
+    "Full Stack",
     "Network Security",
     "Machine Learning",
     "Big Data",
