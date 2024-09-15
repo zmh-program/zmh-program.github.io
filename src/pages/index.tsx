@@ -227,7 +227,7 @@ function PartnerSection() {
                   {partner.quote}
                 </p>
               </div>
-              <ArrowRight className="ml-auto mr-2 transition-all group-hover:translate-x-1 duration-300 text-muted-foreground w-4 h-4" />
+              <ArrowRight className="ml-auto shrink-0 mr-2 transition-all group-hover:translate-x-1 duration-300 text-muted-foreground w-4 h-4" />
             </div>
           </Link>
         ))}
