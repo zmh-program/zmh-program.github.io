@@ -87,6 +87,8 @@ function IntroSection() {
           <div className="flex flex-col md:flex-row mb-4 justify-center items-center">
             <a
               href="https://trendshift.io/repositories/6369"
+              target="_blank"
+              rel="noopener noreferrer"
               className="m-2 w-fit"
             >
               <img
@@ -94,7 +96,12 @@ function IntroSection() {
                 alt="Chat Nio: #1 Repo Of The Day"
               />
             </a>
-            <a href="https://spark-lab.city" className="m-2 w-fit">
+            <a
+              href="https://spark-lab.city"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="m-2 w-fit"
+            >
               <img
                 src="https://spark-lab.city/api/badge?session=1&prize=1"
                 alt="Spark Lab S1 #1 Place"
@@ -318,7 +325,7 @@ function SkillSection() {
 
 function Footer() {
   return (
-    <div className={`footer py-6 text-center text-sm`}>
+    <div className={`footer py-6 px-4 text-center text-sm`}>
       <div className={`mb-1`}>
         <a href="https://beian.miit.gov.cn" target="_blank">
           <Image
