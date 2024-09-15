@@ -12,6 +12,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import WordPullUp from "@/components/magicui/word-pull-up";
 import Meteors from "@/components/magicui/meteors";
 import { BorderBeam } from "@/components/magicui/border-beam";
+import OrbitingCircles from "@/components/magicui/orbiting-circles";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,7 @@ export default function Home() {
     <main className={inter.className}>
       <Meteors />
       <ScrollArea className={`w-full h-full`}>
-        <div className={`flex flex-col space-y-4 max-w-[620px] mx-auto`}>
+        <div className={`flex flex-col p-6 space-y-4 max-w-[620px] mx-auto`}>
           <IntroSection />
           <ProjectSection />
           <TechStackSection />
@@ -103,7 +104,7 @@ function IntroSection() {
           </div>
           <div className={`flex justify-center space-x-4 pr-0.5`}>
             <Link
-              href="https://github.com/ProgramZmh"
+              href="https://github.com/zmh-program"
               target="_blank"
               className={`ml-auto`}
             >
@@ -131,7 +132,8 @@ function ProjectSection() {
           {
             title: "Chat Nio",
             avatar: "chatnio.webp",
-            description: "🚀 Next Generation AI One-Stop Internationalization Solution.",
+            description:
+              "🚀 Next Generation AI One-Stop Internationalization Solution.",
             tags: [
               "K8s",
               "Go",
@@ -193,23 +195,90 @@ function ProjectSection() {
 }
 
 function TechStackSection() {
-  return (
-    <div
-      className={`inline-flex flex-col items-center justify-center w-full h-fit pt-12 pb-20`}
-    >
-      <Title
-        title={"Tech Stack"}
-        subtitle={"技术栈"}
-        tags={["前端", "后端", "网络安全", "机器学习", "大数据", "云计算"]}
-      />
+  const techIconsInner = ["c", "go", "rust", "flutter", "next", "nuxt", "ts"];
 
-      <img
-        src="https://skillicons.dev/icons?i=c,go,rust,python,arduino,lua,nodejs,php,react,next,vue,nuxt,angular,express,tailwindcss,redux,bootstrap,html,css,js,jquery,ts,less,scss,fastapi,django,flask,pytorch,tensorflow,opencv,qt,electron,tauri,threejs&perline=12"
-        alt="Tech Stack"
-        className={`max-w-[80vw] mt-4`}
-      />
-      {/*<img src="https://skillicons.dev/icons?i=mysql,sqlite,redis,postgresql,rabbitmq,docker,kubernetes,nginx,git,npm,pnpm,yarn,vite,vitest,webpack,babel,cmake,anaconda,github,grafana,githubactions,jenkins,figma,aws,azure,gcp,cloudflare,vercel,netlify,heroku&perline=12" alt="Tools I Use" className={`max-w-[80vw] mt-6`} />*/}
-    </div>
+  const techIconsOuter = [
+    "python",
+    "lua",
+    "php",
+    "react",
+    "vue",
+    "angular",
+    "less",
+    "pytorch",
+    "tensorflow",
+  ];
+
+  const techIconsInnerDelay = 100 / techIconsInner.length;
+  const techIconsOuterDelay = 100 / techIconsOuter.length;
+
+  const techCategories = [
+    "Frontend",
+    "Backend",
+    "Network Security",
+    "Machine Learning",
+    "Big Data",
+    "Cloud Computing",
+  ];
+
+  return (
+    <Card className={`relative w-full h-fit p-6`}>
+      <CardTitle>Tech Stack</CardTitle>
+
+      <div className="flex flex-wrap gap-2 mt-2">
+        {techCategories.map((tag, index) => (
+          <span
+            key={index}
+            className="text-sm border rounded px-1.5 py-1 whitespace-nowrap cursor-pointer transition-all duration-300 ease-in-out hover:bg-muted"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <div className="relative flex h-[200px] select-none w-full flex-col items-center justify-center mt-4 overflow-hidden rounded-lg border bg-background md:shadow-xl">
+        <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
+          {"</>"}
+        </span>
+        {/* Inner Circles */}
+        {techIconsInner.map((icon, index) => (
+          <OrbitingCircles
+            key={index}
+            className="size-[30px] border-none bg-transparent"
+            duration={20}
+            delay={index * techIconsInnerDelay}
+            radius={80}
+          >
+            <img
+              src={`https://skillicons.dev/icons?i=${icon}`}
+              alt={`${icon} Icon`}
+              className="w-full h-full object-contain"
+            />
+          </OrbitingCircles>
+        ))}
+
+        {/* Outer Circles (reverse) */}
+        {techIconsOuter.map((icon, index) => (
+          <OrbitingCircles
+            key={index}
+            className="size-[50px] border-none bg-transparent"
+            radius={190}
+            duration={20}
+            delay={index * techIconsOuterDelay}
+            reverse
+          >
+            <img
+              src={`https://skillicons.dev/icons?i=${icon}`}
+              alt={`${icon} Icon`}
+              className="w-full h-full object-contain"
+            />
+          </OrbitingCircles>
+        ))}
+      </div>
+      <div className="mt-2 text-center text-sm text-muted-foreground">
+        <span>7 years journey (since 2017)</span>
+      </div>
+    </Card>
   );
 }
 

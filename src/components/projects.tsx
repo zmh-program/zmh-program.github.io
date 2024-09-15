@@ -29,9 +29,7 @@ const lineGradients = [
 
 function Projects({ data }: ProjectsProps) {
   return (
-    <div
-      className={`grid grid-cols-1 gap-4 mt-4`}
-    >
+    <div className={`grid grid-cols-1 gap-4 mt-4`}>
       {data.map((project, index) => (
         <Project key={index} idx={index} {...project} />
       ))}
@@ -62,35 +60,38 @@ function Project({
         )}
       >
         <div
-          className={cn("shrink-0 w-2 h-full bg-gradient-to-b blur-1 transition-all duration-300 group-hover:w-3", gradient)}
+          className={cn(
+            "shrink-0 w-2 h-full bg-gradient-to-b blur-1 transition-all duration-300 group-hover:w-3",
+            gradient,
+          )}
         />
-          <div className="flex flex-col px-6 pt-2 pb-4 grow">
-            <h3 className="flex flex-row items-center text-lg font-bold">
-              {title}
-              {stars && (
-                <span className="w-fit flex flex-row items-center border text-xs text-secondary-foreground ml-1.5 rounded-md px-1.5 py-0.5 whitespace-nowrap">
-                  <Star className="w-3 h-3 mr-1.5" />
-                  {stars}
-                </span>
-              )}
-            </h3>
-            <p className="text-sm text-secondary-foreground mt-1.5 line-clamp-2 mb-auto">
-              {description}
-            </p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {tags.map((tag, index) => (
-                <span
-                  key={index}
-                  className={cn(
-                    "text-xs bg-muted border rounded px-1.5 py-1 mr-0.5 mb-0.5 whitespace-nowrap select-none cursor-pointer hover:bg-muted-hover transition-all",
-                    "group-hover:bg-muted-hover group-focus:bg-muted-hover group-active:bg-muted-hover",
-                  )}
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+        <div className="flex flex-col px-6 pt-2 pb-4 grow">
+          <h3 className="flex flex-row items-center text-lg font-bold">
+            {title}
+            {stars && (
+              <span className="w-fit flex flex-row items-center border text-xs text-secondary-foreground ml-1.5 rounded-md px-1.5 py-0.5 whitespace-nowrap">
+                <Star className="w-3 h-3 mr-1.5" />
+                {stars}
+              </span>
+            )}
+          </h3>
+          <p className="text-sm text-secondary-foreground mt-1.5 line-clamp-2 mb-auto">
+            {description}
+          </p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {tags.map((tag, index) => (
+              <span
+                key={index}
+                className={cn(
+                  "text-xs bg-muted border rounded px-1.5 py-1 mr-0.5 mb-0.5 whitespace-nowrap select-none cursor-pointer hover:bg-muted-hover transition-all",
+                  "group-hover:bg-muted-hover group-focus:bg-muted-hover group-active:bg-muted-hover",
+                )}
+              >
+                {tag}
+              </span>
+            ))}
           </div>
+        </div>
       </div>
     </Link>
   );
