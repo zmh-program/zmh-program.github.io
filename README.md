@@ -1,6 +1,6 @@
-# My Profolio
+# My Portfolio
 
-### Tech Stack
+## Tech Stack
 
 - [x] 🍇 Next.js (Static Export)
 - [x] 🍒 TypeScript
