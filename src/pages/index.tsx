@@ -136,13 +136,14 @@ function ProjectSection() {
       <Projects
         data={[
           {
-            title: "Chat Nio",
+            title: "CoAI.Dev",
             avatar: "chatnio.webp",
             description:
               "🚀 Next Generation AI One-Stop Internationalization Solution.",
             tags: ["K8s", "Go", "React", "TypeScript", "WebSocket", "PWA"],
-            link: "https://chatnio.com",
-            stars: "3k+",
+            link: "https://coai.dev",
+            stars: "6k+",
+            sold: true,
           },
           {
             title: "FyStart",
@@ -326,7 +327,8 @@ function SkillSection() {
 function Footer() {
   return (
     <div className={`footer py-6 px-4 text-center text-sm`}>
-      <div className={`mb-1`}>
+      {/*old domain only:
+       <div className={`mb-1`}>
         <a href="https://beian.miit.gov.cn" target="_blank">
           <Image
             src="/gov.webp"
@@ -337,7 +339,7 @@ function Footer() {
           />
           鲁ICP备2022034318号-1
         </a>
-      </div>
+      </div> */}
       <div>© 2021-present @zmh-program. All rights reserved.</div>
     </div>
   );
