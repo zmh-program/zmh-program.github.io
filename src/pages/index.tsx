@@ -5,7 +5,7 @@ import { Typing } from "@/components/typing";
 import Projects from "@/components/projects";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { Card, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import WordPullUp from "@/components/magicui/word-pull-up";
 import Meteors from "@/components/magicui/meteors";
@@ -37,7 +37,7 @@ function IntroSection() {
       <div className="mt-4 border p-2 rounded-md flex items-center w-fit backdrop-blur-sm mb-2">
         <Quote className="w-3 h-3 mr-1.5 text-foreground" />
         <Typing
-          content="Nothing is impossible."
+          content="Nis nán þing unwealdes."
           className="text-sm text-foreground"
           typingSpeed={150}
           keyboardSeed={2}
@@ -61,24 +61,26 @@ function IntroSection() {
             />
           </div>
           <div className={`flex flex-col justify-center`}>
-            <h1 className={`text-2xl font-semibold`}>ProgramZmh</h1>
+            <h1 className={`text-2xl font-semibold`}>
+              ProgramZmh{" "}
+              <span className="text-muted-foreground text-sm font-normal">
+                (aka. Kairo)
+              </span>
+            </h1>
             <WordPullUp
               className={`text-base md:text-left font-normal mt-1`}
-              words={"15 y.o. / Co-Founder @LightXi Inc."}
+              words={"16 y.o. / Co-Founder @LightXi Inc."}
             />
 
-            <div className="flex flex-wrap mt-2 justify-center">
-              <span className="px-2 py-1 m-1 text-xs font-medium rounded-md border bg-secondary/40 cursor-pointer transition hover:bg-secondary">
-                CTO
-              </span>
+            <div className="flex flex-wrap mt-2">
               <span className="px-2 py-1 m-1 text-xs font-medium rounded-md border bg-secondary/40 cursor-pointer transition hover:bg-secondary">
                 INTJ
               </span>
               <span className="px-2 py-1 m-1 text-xs font-medium rounded-md border bg-secondary/40 cursor-pointer transition-all hover:bg-secondary">
-                Full Stack Developer
+                Full Stack
               </span>
-              <span className="px-2 py-1 m-1 text-xs font-medium rounded-md border bg-secondary/40 cursor-pointer transition hover:bg-secondary">
-                Open Source Enthusiast
+              <span className="px-2 py-1 m-1 text-xs font-medium rounded-md border bg-secondary/40 cursor-pointer transition-all hover:bg-secondary">
+                Startup
               </span>
             </div>
           </div>
@@ -94,17 +96,6 @@ function IntroSection() {
               <img
                 src="https://trendshift.io/api/badge/repositories/6369"
                 alt="Chat Nio: #1 Repo Of The Day"
-              />
-            </a>
-            <a
-              href="https://spark-lab.city"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="m-2 w-fit"
-            >
-              <img
-                src="https://spark-lab.city/api/badge?session=1&prize=1"
-                alt="Spark Lab S1 #1 Place"
               />
             </a>
           </div>
@@ -137,22 +128,12 @@ function ProjectSection() {
         data={[
           {
             title: "CoAI.Dev",
-            avatar: "chatnio.webp",
             description:
               "🚀 Next Generation AI One-Stop Internationalization Solution.",
             tags: ["K8s", "Go", "React", "TypeScript", "WebSocket", "PWA"],
             link: "https://coai.dev",
-            stars: "6k+",
+            stars: "8k+",
             sold: true,
-          },
-          {
-            title: "FyStart",
-            avatar: "fystart.webp",
-            description:
-              "🍏 AI-powered beautiful and lightweight start page. Features cloud sync, PWA offline access, and various components including quotes, toolbox, cards, search suggestions, and translations.",
-            tags: ["Go", "Vue", "PWA", "Service Worker"],
-            link: "https://github.com/Deeptrain-Community/fystart",
-            stars: "0.1k",
           },
           {
             title: "Next Whois UI",
@@ -160,32 +141,15 @@ function ProjectSection() {
               "🧪 Your Next-Gen Whois Lookup Tool With Modern UI. Support Domain/IPv4/IPv6/ASN/CIDR Whois Lookup And Powerful Features. ",
             tags: ["Next.js", "TypeScript", "Whois Lookup"],
             link: "https://github.com/zmh-program/next-whois-ui",
-            stars: "0.2k",
+            stars: "0.4k",
           },
           {
-            title: "Code Statistic",
-            avatar: "stats.webp",
+            title: "FyStart",
             description:
-              "⚡ Dynamically generate your GitHub stat cards! Featuring User, Repo, Contributor, Release, Issue, and PR Cards. Supports dark mode and API integration. Explore the possibilities!",
-            tags: ["Go", "PHP", "JavaScript", "Edge Computing"],
-            link: "https://stats.deeptrain.net",
-          },
-          {
-            title: "Web Mirai Panel",
-            avatar: "webchatgpt.webp",
-            description:
-              "🤖 Web UI of ChatGPT Mirai Bot, multi-instance management support, conf editing, health check, terminal execution, support for password access.",
-            tags: ["Python", "Vue", "Mirai", "Docker Core"],
-            link: "https://github.com/zmh-program/web-chatgpt-qq-bot",
-            stars: "0.2k",
-          },
-          {
-            title: "Lyrify",
-            avatar: "lyrify.webp",
-            description:
-              "🔍 Aggregated translation platform, supports simultaneous translation with multiple translation engines, offers various translation result displays and comparison of translation results",
-            tags: ["Next.js", "TypeScript"],
-            link: "https://github.com/SIPC/Lyrify",
+              "🍏 AI-powered beautiful and lightweight start page. Features cloud sync, PWA offline access, and various components including quotes, toolbox, cards, search suggestions, and translations.",
+            tags: ["Go", "Vue", "PWA", "Service Worker"],
+            link: "https://github.com/zmh-program/fystart",
+            stars: "0.1k",
           },
         ]}
       />
@@ -198,8 +162,8 @@ function PartnerSection() {
     {
       name: "Sh1n3zZ",
       logo: "/rakuyou.webp",
-      description: "BGP Player / Full Stack / Embedded / OIer / INFP",
-      quote: "看斜阳 洒落金光，恋此景 似琳琅",
+      description: "BGP Player / Full Stack / Embedded / OIer",
+      quote: "",
       url: "https://qaq.gs",
     },
   ];
@@ -223,10 +187,12 @@ function PartnerSection() {
                 <p className="text-sm text-muted-foreground">
                   {partner.description}
                 </p>
-                <p className="text-sm text-muted-foreground">
-                  <Quote className="w-3 h-3 mr-1 inline-block" />
-                  {partner.quote}
-                </p>
+                {partner.quote && (
+                  <p className="text-sm text-muted-foreground">
+                    <Quote className="w-3 h-3 mr-1 inline-block" />
+                    {partner.quote}
+                  </p>
+                )}
               </div>
               <ArrowRight className="ml-auto shrink-0 mr-2 transition-all group-hover:translate-x-1 duration-300 text-muted-foreground w-4 h-4" />
             </div>
@@ -278,7 +244,7 @@ function SkillSection() {
         ))}
       </div>
 
-      <div className="relative flex h-[200px] select-none w-full flex-col items-center justify-center mt-4 overflow-hidden rounded-lg border bg-background md:shadow-xl">
+      <div className="relative flex h-[200px] select-none w-full flex-col items-center justify-center mt-4 overflow-hidden rounded-lg border bg-background md:shadow-md">
         <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
           {"</>"}
         </span>
@@ -318,7 +284,7 @@ function SkillSection() {
         ))}
       </div>
       <div className="mt-2 text-center text-sm text-muted-foreground">
-        <span>7 years journey (since 2017)</span>
+        <span>8 years journey (since 2017)</span>
       </div>
     </Card>
   );
@@ -327,20 +293,7 @@ function SkillSection() {
 function Footer() {
   return (
     <div className={`footer py-6 px-4 text-center text-sm`}>
-      {/*old domain only:
-       <div className={`mb-1`}>
-        <a href="https://beian.miit.gov.cn" target="_blank">
-          <Image
-            src="/gov.webp"
-            alt="beian"
-            width={14}
-            height={14}
-            className={`inline-block mr-1`}
-          />
-          鲁ICP备2022034318号-1
-        </a>
-      </div> */}
-      <div>© 2021-present @zmh-program. All rights reserved.</div>
+      <div>© 2021-present @Kairo. All rights reserved.</div>
     </div>
   );
 }

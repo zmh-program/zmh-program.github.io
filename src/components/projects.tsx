@@ -8,7 +8,6 @@ type ProjectType = {
   description: string;
   tags: (string | React.ReactElement)[];
   link: string;
-  avatar?: string;
   stars?: string;
   sold?: boolean;
 };
@@ -42,7 +41,6 @@ function Project({
   description,
   tags,
   link,
-  avatar,
   stars,
   sold,
 }: ProjectType & {
@@ -68,14 +66,14 @@ function Project({
         <div className="flex flex-col px-6 pt-2 pb-4 grow">
           <h3 className="flex flex-row items-center text-lg font-bold">
             {title}
-            
+
             {sold && (
               <span className="w-fit flex flex-row items-center border text-xs text-secondary-foreground ml-1.5 rounded-md px-1.5 py-0.5 whitespace-nowrap text-amber-500">
                 <CheckCircle className="w-3 h-3 mr-1.5" />
                 Sold
               </span>
             )}
-            
+
             {stars && (
               <span className="w-fit flex flex-row items-center border text-xs text-secondary-foreground ml-1.5 rounded-md px-1.5 py-0.5 whitespace-nowrap">
                 <Star className="w-3 h-3 mr-1.5" />
