@@ -237,6 +237,56 @@ export default function Home() {
               </section>
 
               <section>
+                <h2 className="text-lg font-medium tracking-tight mb-2 flex items-center gap-2">
+                  <span>Achievements</span>
+                  <div className="flex-1 h-[1px] bg-border/60" />
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-1.5">
+                  {[
+                    {
+                      title: "China InnoForce 50",
+                      description: "Super Developer of the Year",
+                      detail: "GeekPark",
+                      year: "2025",
+                    },
+                    {
+                      title: "GitHub Trending",
+                      description: "#1 Repo Of The Day",
+                      detail: "CoAI.Dev",
+                      year: "2024",
+                    },
+                    {
+                      title: "Spark Lab S1",
+                      description: "Hackathon Champion",
+                      detail: "AI × Startup",
+                      year: "2024",
+                    },
+                  ].map((achievement, index) => (
+                    <div key={index} className="paper-card p-2 text-xs">
+                      <div className="flex flex-col gap-0.5">
+                        <div className="flex items-center justify-between">
+                          <h3 className="font-medium text-foreground/80">
+                            {achievement.title}
+                          </h3>
+                          <span className="text-[10px] text-muted-foreground/50">
+                            {achievement.year}
+                          </span>
+                        </div>
+                        <div className="flex items-center justify-between text-[10px]">
+                          <span className="text-muted-foreground/70">
+                            {achievement.description}
+                          </span>
+                          <span className="text-muted-foreground/50 ml-1">
+                            {achievement.detail}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <section>
                 <h2 className="text-xl font-semibold tracking-tight mb-4 flex items-center gap-2">
                   <span>Partners</span>
                   <div className="flex-1 h-[1px] bg-border/60" />
