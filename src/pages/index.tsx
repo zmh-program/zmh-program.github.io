@@ -1,4 +1,5 @@
 import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 import Image from "next/image";
 import {
   RiArrowRightLine,
@@ -91,7 +92,12 @@ export default function Home() {
 
             <div className="space-y-6 sm:space-y-8">
               <section>
-                <h2 className="text-xl font-semibold tracking-tight mb-4 flex items-center gap-2">
+                <h2
+                  className={cn(
+                    GeistSans.className,
+                    "text-sm font-normal tracking-normal mb-4 flex items-center gap-2",
+                  )}
+                >
                   <span>About Me</span>
                   <div className="flex-1 h-[1px] bg-border/60" />
                 </h2>
@@ -114,7 +120,12 @@ export default function Home() {
               </section>
 
               <section>
-                <h2 className="text-xl font-semibold tracking-tight mb-4 flex items-center gap-2">
+                <h2
+                  className={cn(
+                    GeistSans.className,
+                    "text-sm font-normal tracking-normal mb-4 flex items-center gap-2",
+                  )}
+                >
                   <span>Tech Stack</span>
                   <div className="flex-1 h-[1px] bg-border/60" />
                   <a
@@ -159,7 +170,12 @@ export default function Home() {
               </section>
 
               <section>
-                <h2 className="text-xl font-semibold tracking-tight mb-4 flex items-center gap-2">
+                <h2
+                  className={cn(
+                    GeistSans.className,
+                    "text-sm font-normal tracking-normal mb-4 flex items-center gap-2",
+                  )}
+                >
                   <span>Project Experience</span>
                   <div className="flex-1 h-[1px] bg-border/60" />
                   <a
@@ -259,7 +275,12 @@ export default function Home() {
               </section>
 
               <section>
-                <h2 className="text-lg font-medium tracking-tight mb-2 flex items-center gap-2">
+                <h2
+                  className={cn(
+                    GeistSans.className,
+                    "text-sm font-normal tracking-normal mb-4 flex items-center gap-2",
+                  )}
+                >
                   <span>Achievements</span>
                   <div className="flex-1 h-[1px] bg-border/60" />
                 </h2>
@@ -289,7 +310,7 @@ export default function Home() {
                         <div className="flex items-center justify-between">
                           <h3 className="font-medium text-foreground/80 relative">
                             {achievement.title}
-                            <span className="absolute -bottom-[2px] left-0 w-0 h-[1px] bg-primary/20 group-hover:w-full duration-500 ease-out" />
+                            <span className="absolute -bottom- left-0 w-0 h-[1px] bg-primary/20 group-hover:w-full duration-500 ease-out" />
                           </h3>
                           <span className="text-[10px] text-muted-foreground/50">
                             {achievement.year}
@@ -310,7 +331,12 @@ export default function Home() {
               </section>
 
               <section>
-                <h2 className="text-xl font-semibold tracking-tight mb-4 flex items-center gap-2">
+                <h2
+                  className={cn(
+                    GeistSans.className,
+                    "text-sm font-normal tracking-normal mb-4 flex items-center gap-2",
+                  )}
+                >
                   <span>Partners</span>
                   <div className="flex-1 h-[1px] bg-border/60" />
                 </h2>
