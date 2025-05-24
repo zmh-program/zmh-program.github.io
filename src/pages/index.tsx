@@ -19,7 +19,7 @@ export default function Home() {
           gridSize={16}
           gridColor="hsla(var(--border) / 0.45)"
         />
-        <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12">
+        <div className="w-full max-w-3xl mx-auto px-4 py-8 sm:py-12">
           <div className="paper-card p-4 sm:p-8 space-y-6 sm:space-y-8">
             <header className="space-y-4">
               <div className="flex flex-col sm:flex-row items-center sm:items-start sm:justify-between gap-4 sm:gap-0">
@@ -255,7 +255,7 @@ export default function Home() {
                             </h3>
                             <ArrowRight className="w-3.5 h-3.5 text-muted-foreground/60 group-hover:text-primary/80 transition-colors" />
                           </div>
-                          <p className="text-sm text-muted-foreground truncate">
+                          <p className="text-sm text-muted-foreground truncate break-words whitespace-pre-wrap">
                             {partner.description}
                           </p>
                         </div>
