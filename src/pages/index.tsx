@@ -1,6 +1,6 @@
 import { GeistMono } from "geist/font/mono";
 import Image from "next/image";
-import { ArrowRight, Quote } from "lucide-react";
+import { RiArrowRightLine, RiQuoteText } from "@remixicon/react";
 import { Typing } from "@/components/typing";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -23,7 +23,7 @@ export default function Home() {
           gridSize={16}
           gridColor="hsla(var(--border) / 0.45)"
         />
-        <div className="fixed top-4 right-4 z-50">
+        <div className="fixed bottom-4 right-4 z-50 sm:top-4 sm:right-4 sm:bottom-auto">
           <ThemeToggle />
         </div>
         <div className="w-full max-w-3xl mx-auto px-4 py-8 sm:py-12">
@@ -53,7 +53,7 @@ export default function Home() {
               </div>
 
               <div className="flex items-center gap-2 w-fit mx-auto sm:mx-0">
-                <Quote className="w-3 h-3 text-foreground/60 flex-shrink-0" />
+                <RiQuoteText className="w-3 h-3 text-foreground/60 flex-shrink-0" />
                 <Typing
                   content="I've mastered nothing, yet code rhythm echoes for a lifetime."
                   className="text-sm text-foreground/80"
@@ -229,7 +229,7 @@ export default function Home() {
                             ))}
                           </div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-muted-foreground shrink-0 mt-1 hidden sm:block" />
+                        <RiArrowRightLine className="w-4 h-4 text-muted-foreground shrink-0 mt-1 hidden sm:block" />
                       </div>
                     </Link>
                   ))}
@@ -270,7 +270,7 @@ export default function Home() {
                             <h3 className="text-base font-medium truncate">
                               {partner.name}
                             </h3>
-                            <ArrowRight className="w-3.5 h-3.5 text-muted-foreground/60 group-hover:text-primary/80 transition-colors" />
+                            <RiArrowRightLine className="w-3.5 h-3.5 text-muted-foreground/60 group-hover:text-primary/80 transition-colors" />
                           </div>
                           <p className="text-sm text-muted-foreground truncate break-words whitespace-pre-wrap">
                             {partner.description}
