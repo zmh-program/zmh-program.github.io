@@ -226,7 +226,7 @@ export default function Home() {
                   {[
                     {
                       name: "Sh1n3zZ",
-                      logo: "/rakuyou.webp",
+                      logo: "/sh1n3zz.webp",
                       description: "BGP Player / Full Stack / Embedded / OIer",
                       url: "https://github.com/sh1n3zz",
                     },
