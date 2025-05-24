@@ -5,6 +5,14 @@ import {
   RiArrowRightLine,
   RiArrowRightUpBoxFill,
   RiQuoteText,
+  RiGamepadLine,
+  RiKeyboardLine,
+  RiCodeSSlashLine,
+  RiTerminalBoxLine,
+  RiBrainLine,
+  RiRocketLine,
+  RiGithubFill,
+  RiAwardLine,
 } from "@remixicon/react";
 import { Typing } from "@/components/typing";
 import Link from "next/link";
@@ -365,6 +373,96 @@ export default function Home() {
                         </div>
                       </div>
                     </Link>
+                  ))}
+                </div>
+              </section>
+
+              <section>
+                <h2
+                  className={cn(
+                    GeistSans.className,
+                    "text-sm font-normal tracking-normal mb-4 flex items-center gap-2",
+                  )}
+                >
+                  <span>Timeline</span>
+                  <div className="flex-1 h-[1px] bg-border/60" />
+                </h2>
+                <div className="space-y-2">
+                  {[
+                    {
+                      year: "2014",
+                      description:
+                        "Started playing Minecraft, fascinated by redstone mechanics and command blocks",
+                      icon: <RiGamepadLine className="w-4 h-4" />,
+                      iconBg: "bg-emerald-500/20",
+                    },
+                    {
+                      year: "2016",
+                      description:
+                        "Joined school computer group, practiced typing and reached 200 CPM",
+                      icon: <RiKeyboardLine className="w-4 h-4" />,
+                      iconBg: "bg-blue-500/20",
+                    },
+                    {
+                      year: "2017",
+                      description:
+                        "Began learning programming with Python and basic Forge Modding",
+                      icon: <RiCodeSSlashLine className="w-4 h-4" />,
+                      iconBg: "bg-yellow-500/20",
+                    },
+                    {
+                      year: "2020",
+                      description:
+                        "Started exploring Java and Lua, attempted to build a TCP-based chat system",
+                      icon: <RiTerminalBoxLine className="w-4 h-4" />,
+                      iconBg: "bg-red-500/20",
+                    },
+                    {
+                      year: "2022",
+                      description:
+                        "Started learning Machine Learning basics and Full Stack Development",
+                      icon: <RiBrainLine className="w-4 h-4" />,
+                      iconBg: "bg-purple-500/20",
+                    },
+                    {
+                      year: "2023",
+                      description:
+                        "Launched Chat Nio (CoAI.Dev) and began commercial conversion",
+                      icon: <RiRocketLine className="w-4 h-4" />,
+                      iconBg: "bg-sky-500/20",
+                    },
+                    {
+                      year: "2024",
+                      description:
+                        "Achieved GitHub #1 trending, Chat Nio (CoAI.Dev) was acquired",
+                      icon: <RiGithubFill className="w-4 h-4" />,
+                      iconBg: "bg-slate-500/20",
+                    },
+                    {
+                      year: "2025",
+                      description:
+                        "GeekPark InnoForce 50 Super Developer of the Year",
+                      icon: <RiAwardLine className="w-4 h-4" />,
+                      iconBg: "bg-amber-500/20",
+                    },
+                  ].map((event, index) => (
+                    <div
+                      key={index}
+                      className="paper-card p-2 relative overflow-hidden group"
+                    >
+                      <div className="absolute top-0 left-0 w-1 h-full bg-primary/20 group-hover:bg-primary/40 transition-colors" />
+                      <div className="flex gap-2 items-center">
+                        <div className="text-sm font-medium text-primary/80 w-12 flex-shrink-0">
+                          {event.year}
+                        </div>
+                        <div className={cn("p-1 rounded-md", event.iconBg)}>
+                          {event.icon}
+                        </div>
+                        <p className="text-xs text-muted-foreground">
+                          {event.description}
+                        </p>
+                      </div>
+                    </div>
                   ))}
                 </div>
               </section>
