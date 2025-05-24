@@ -306,7 +306,7 @@ export default function Home() {
                         <div className="flex items-center justify-between">
                           <h3 className="font-medium text-foreground/80 relative">
                             {achievement.title}
-                            <span className="absolute -bottom- left-0 w-0 h-[1px] bg-primary/20 group-hover:w-full duration-500 ease-out" />
+                            <span className="absolute -bottom-[1px] left-0 w-0 h-[1px] bg-primary/20 group-hover:w-full duration-500 ease-out" />
                           </h3>
                           <span className="text-[10px] text-muted-foreground/50">
                             {achievement.year}
