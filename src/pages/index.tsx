@@ -1,6 +1,10 @@
 import { GeistMono } from "geist/font/mono";
 import Image from "next/image";
-import { RiArrowRightLine, RiQuoteText } from "@remixicon/react";
+import {
+  RiArrowRightLine,
+  RiArrowRightUpBoxFill,
+  RiQuoteText,
+} from "@remixicon/react";
 import { Typing } from "@/components/typing";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -113,6 +117,14 @@ export default function Home() {
                 <h2 className="text-xl font-semibold tracking-tight mb-4 flex items-center gap-2">
                   <span>Tech Stack</span>
                   <div className="flex-1 h-[1px] bg-border/60" />
+                  <a
+                    href="https://gitroll.io/profile/u8Lxle2WApghkWm7A0ylMCYH2tYx2/stacks"
+                    target="_blank"
+                    className="text-xs text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 group"
+                  >
+                    GitRoll
+                    <RiArrowRightUpBoxFill className="w-3.5 h-3.5 text-muted-foreground/60 group-hover:text-primary/80 transition-colors" />
+                  </a>
                 </h2>
                 <div className="space-y-2.5">
                   <div className="paper-card h-[200px] select-none flex items-center justify-center overflow-hidden">
@@ -138,9 +150,11 @@ export default function Home() {
                       duration={20}
                     />
                   </div>
-                  <p className="text-center text-sm text-muted-foreground">
-                    8 years journey (since 2017)
-                  </p>
+                  <div className="flex flex-row flex-wrap items-center gap-2 justify-center">
+                    <p className="text-center text-sm text-muted-foreground">
+                      8 years journey (since 2017)
+                    </p>
+                  </div>
                 </div>
               </section>
 
@@ -148,6 +162,14 @@ export default function Home() {
                 <h2 className="text-xl font-semibold tracking-tight mb-4 flex items-center gap-2">
                   <span>Project Experience</span>
                   <div className="flex-1 h-[1px] bg-border/60" />
+                  <a
+                    href="https://github.com/zmh-program"
+                    target="_blank"
+                    className="text-xs text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 group"
+                  >
+                    GitHub
+                    <RiArrowRightUpBoxFill className="w-3.5 h-3.5 text-muted-foreground/60 group-hover:text-primary/80 transition-colors" />
+                  </a>
                 </h2>
                 <div className="grid gap-2">
                   {[
@@ -263,10 +285,11 @@ export default function Home() {
                     },
                   ].map((achievement, index) => (
                     <div key={index} className="paper-card p-2 text-xs">
-                      <div className="flex flex-col gap-0.5">
+                      <div className="flex flex-col gap-0.5 group">
                         <div className="flex items-center justify-between">
-                          <h3 className="font-medium text-foreground/80">
+                          <h3 className="font-medium text-foreground/80 relative">
                             {achievement.title}
+                            <span className="absolute -bottom-[2px] left-0 w-0 h-[1px] bg-primary/20 group-hover:w-full duration-500 ease-out" />
                           </h3>
                           <span className="text-[10px] text-muted-foreground/50">
                             {achievement.year}
