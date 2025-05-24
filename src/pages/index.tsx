@@ -1,6 +1,6 @@
-import { Inter } from "next/font/google";
+import { GeistMono } from 'geist/font/mono';
 import Image from "next/image";
-import { ArrowRight, Github, Mail, Quote, Twitter } from "lucide-react";
+import { ArrowRight, Quote } from "lucide-react";
 import { Typing } from "@/components/typing";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -8,11 +8,9 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { TechStackCircles } from "@/components/orbiting-circles";
 import { PaperGrid } from "@/components/ui/paper-grid";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
   return (
-    <main className={cn(inter.className, "min-h-screen bg-background")}>
+    <main className={cn(GeistMono.className, "min-h-screen bg-background tracking-tighter")}>
       <ScrollArea className="w-full h-full">
         <PaperGrid
           className="fixed inset-0 z-0"
