@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="keywords" content="Kairo, ProgramZmh, LightXi" />
         <meta
           name="description"
-          content="Hi, I'm Kairo, Co-Founder @LightXi Inc. Passionate about innovation and creation. Embracing challenges and turning ideas into reality."
+          content="Kairo (ProgramZmh) | Full Stack Developer & Entrepreneur | Founder of CoAI.Dev & Co-Founder of LightXi Inc | Passionate about innovation, creation, and turning ideas into reality"
         />
       </Head>
       <Component {...pageProps} />

@@ -10,7 +10,7 @@ export interface OrbitingCirclesProps {
   path?: boolean;
 }
 
-export default function OrbitingCircles({
+export function OrbitingCircles({
   className,
   children,
   reverse,

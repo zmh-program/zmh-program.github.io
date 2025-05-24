@@ -1,4 +1,4 @@
-import { GeistMono } from 'geist/font/mono';
+import { GeistMono } from "geist/font/mono";
 import Image from "next/image";
 import { ArrowRight, Quote } from "lucide-react";
 import { Typing } from "@/components/typing";
@@ -10,7 +10,12 @@ import { PaperGrid } from "@/components/ui/paper-grid";
 
 export default function Home() {
   return (
-    <main className={cn(GeistMono.className, "min-h-screen bg-background tracking-tighter")}>
+    <main
+      className={cn(
+        GeistMono.className,
+        "min-h-screen bg-background tracking-tighter",
+      )}
+    >
       <ScrollArea className="w-full h-full">
         <PaperGrid
           className="fixed inset-0 z-0"
@@ -119,6 +124,8 @@ export default function Home() {
                         "nuxt",
                         "pytorch",
                         "tensorflow",
+                        "cpp",
+                        "java",
                       ]}
                       innerRadius={60}
                       outerRadius={140}
@@ -144,6 +151,7 @@ export default function Home() {
                       title: "CoAI.Dev",
                       description:
                         "🚀 Next Generation AI One-Stop Internationalization Solution.",
+                      role: "Founder",
                       tags: [
                         "K8s",
                         "Go",
@@ -160,6 +168,7 @@ export default function Home() {
                       title: "Next Whois UI",
                       description:
                         "🧪 Your Next-Gen Whois Lookup Tool With Modern UI. Support Domain/IPv4/IPv6/ASN/CIDR Whois Lookup And Powerful Features.",
+                      role: "Author",
                       tags: ["Next.js", "TypeScript", "Whois Lookup"],
                       link: "https://github.com/zmh-program/next-whois-ui",
                       stars: "0.4k",
@@ -168,6 +177,7 @@ export default function Home() {
                       title: "Fyrrum Start",
                       description:
                         "🍏 AI-powered beautiful and lightweight start page. Features cloud sync, PWA offline access, and various components.",
+                      role: "Author",
                       tags: ["Go", "Vue", "PWA", "Service Worker"],
                       link: "https://github.com/zmh-program/fystart",
                       stars: "0.1k",
@@ -180,30 +190,35 @@ export default function Home() {
                       className="paper-card p-4 hover:translate-y-[-1px] transition-all duration-300"
                     >
                       <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
-                        <div className="space-y-2 w-full">
-                          <div className="flex flex-wrap items-center gap-2">
-                            <h3 className="text-lg font-medium">
-                              {project.title}
-                            </h3>
-                            {project.stars && (
-                              <span className="paper-tag text-xs">
-                                ⭐ {project.stars}
-                              </span>
-                            )}
-                            {project.sold && (
-                              <span className="paper-tag text-xs bg-primary/5 text-primary">
-                                Acquired
-                              </span>
-                            )}
+                        <div className="space-y-3 w-full">
+                          <div className="flex flex-col gap-2">
+                            <div className="flex items-center gap-2">
+                              <h3 className="text-lg font-medium">
+                                {project.title}
+                              </h3>
+                              {project.stars && (
+                                <span className="paper-tag text-xs bg-secondary/40">
+                                  ⭐ {project.stars}
+                                </span>
+                              )}
+                              {project.sold && (
+                                <span className="paper-tag text-xs bg-primary/5 text-primary hover:bg-primary/10">
+                                  Acquired
+                                </span>
+                              )}
+                            </div>
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                              {project.description}
+                            </p>
                           </div>
-                          <p className="text-sm text-muted-foreground">
-                            {project.description}
-                          </p>
-                          <div className="flex flex-wrap gap-1.5">
+                          <div className="flex flex-wrap items-center gap-1.5">
+                            <span className="paper-tag text-xs bg-primary/5 text-primary font-medium">
+                              {project.role}
+                            </span>
                             {project.tags.map((tag) => (
                               <span
                                 key={tag}
-                                className="px-1.5 py-0.5 text-xs bg-secondary/40"
+                                className="px-2 py-0.5 text-xs bg-secondary/20 border border-border/40"
                               >
                                 {tag}
                               </span>
