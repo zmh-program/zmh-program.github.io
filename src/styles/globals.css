@@ -64,12 +64,12 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-200;
     background-image: 
-      linear-gradient(rgba(255,255,255,.8) 2px, transparent 2px),
-      linear-gradient(90deg, rgba(255,255,255,.8) 2px, transparent 2px),
-      linear-gradient(rgba(0,0,0,.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,0,0,.03) 1px, transparent 1px);
+      linear-gradient(rgba(var(--background) / 0.8) 2px, transparent 2px),
+      linear-gradient(90deg, rgba(var(--background) / 0.8) 2px, transparent 2px),
+      linear-gradient(rgba(var(--foreground) / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(var(--foreground) / 0.03) 1px, transparent 1px);
     background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
     background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
   }
@@ -77,32 +77,31 @@
 
 @layer components {
   .paper-card {
-    @apply bg-white shadow-sm border border-border/40;
-    background-color: rgba(255, 255, 255, 0.75);
+    @apply bg-background/75 shadow-sm border border-border/40 transition-colors duration-200;
     backdrop-filter: blur(1px);
     box-shadow: 
-      0 1px 2px rgba(0,0,0,0.03),
-      0 3px 5px -2px rgba(0,0,0,0.02);
+      0 1px 2px rgba(var(--foreground) / 0.03),
+      0 3px 5px -2px rgba(var(--foreground) / 0.02);
   }
 
   .paper-tag {
-    @apply px-1.5 py-0.5 text-sm font-medium bg-white/80 border border-border/40;
-    @apply hover:bg-white/95 transition-all duration-200;
+    @apply px-1.5 py-0.5 text-sm font-medium bg-background/80 border border-border/40 transition-colors duration-200;
+    @apply hover:bg-background/95;
     @apply text-muted-foreground/90 hover:text-foreground;
   }
 
   .paper-button {
-    @apply rounded-md px-3 py-1.5 border bg-white/90;
-    @apply hover:bg-white/95 transition-all duration-200;
+    @apply rounded-md px-3 py-1.5 border bg-background/90 transition-colors duration-200;
+    @apply hover:bg-background/95;
     box-shadow: 
-      0 1px 1px rgba(0,0,0,0.02),
-      0 2px 3px -1px rgba(0,0,0,0.01);
+      0 1px 1px rgba(var(--foreground) / 0.02),
+      0 2px 3px -1px rgba(var(--foreground) / 0.01);
   }
 
   .paper-input {
-    @apply rounded-md border bg-white/90 px-3 py-1.5;
+    @apply rounded-md border bg-background/90 px-3 py-1.5 transition-colors duration-200;
     @apply focus:outline-none focus:ring-1 focus:ring-primary/20;
-    box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
+    box-shadow: inset 0 1px 2px rgba(var(--foreground) / 0.02);
   }
 }
 

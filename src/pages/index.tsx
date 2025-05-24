@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { TechStackCircles } from "@/components/orbiting-circles";
 import { PaperGrid } from "@/components/ui/paper-grid";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   return (
@@ -22,6 +23,9 @@ export default function Home() {
           gridSize={16}
           gridColor="hsla(var(--border) / 0.45)"
         />
+        <div className="fixed top-4 right-4 z-50">
+          <ThemeToggle />
+        </div>
         <div className="w-full max-w-3xl mx-auto px-4 py-8 sm:py-12">
           <div className="paper-card p-4 sm:p-8 space-y-6 sm:space-y-8">
             <header className="space-y-4">
