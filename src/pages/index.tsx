@@ -21,6 +21,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { TechStackCircles } from "@/components/orbiting-circles";
 import { PaperGrid } from "@/components/ui/paper-grid";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Timeline } from "@/components/timeline";
 
 export default function Home() {
   return (
@@ -32,7 +33,7 @@ export default function Home() {
     >
       <ScrollArea className="w-full h-full">
         <PaperGrid
-          className="fixed inset-0 z-0"
+          className="fixed inset-0 z-0 pointer-events-none"
           gridSize={16}
           gridColor="hsla(var(--border) / 0.45)"
         />
@@ -277,62 +278,6 @@ export default function Home() {
                     "text-sm font-normal tracking-normal mb-4 flex items-center gap-2",
                   )}
                 >
-                  <span>Achievements</span>
-                  <div className="flex-1 h-[1px] bg-border/60" />
-                </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-1.5">
-                  {[
-                    {
-                      title: "China InnoForce 50",
-                      description: "Super Developer of the Year",
-                      detail: "GeekPark",
-                      year: "2025",
-                    },
-                    {
-                      title: "GitHub Trending",
-                      description: "#1 Repo Of The Day",
-                      detail: "CoAI.Dev",
-                      year: "2024",
-                    },
-                    {
-                      title: "Spark Lab S1",
-                      description: "Hackathon Champion",
-                      detail: "AI × Startup",
-                      year: "2024",
-                    },
-                  ].map((achievement, index) => (
-                    <div key={index} className="paper-card p-2 text-xs">
-                      <div className="flex flex-col gap-0.5 group">
-                        <div className="flex items-center justify-between">
-                          <h3 className="font-medium text-foreground/80 relative">
-                            {achievement.title}
-                            <span className="absolute -bottom-[1px] left-0 w-0 h-[1px] bg-primary/20 group-hover:w-full duration-500 ease-out" />
-                          </h3>
-                          <span className="text-[10px] text-muted-foreground/50">
-                            {achievement.year}
-                          </span>
-                        </div>
-                        <div className="flex items-center justify-between text-[10px]">
-                          <span className="text-muted-foreground/70">
-                            {achievement.description}
-                          </span>
-                          <span className="text-muted-foreground/50 ml-1">
-                            {achievement.detail}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              <section>
-                <h2
-                  className={cn(
-                    GeistSans.className,
-                    "text-sm font-normal tracking-normal mb-4 flex items-center gap-2",
-                  )}
-                >
                   <span>Partners</span>
                   <div className="flex-1 h-[1px] bg-border/60" />
                 </h2>
@@ -387,83 +332,98 @@ export default function Home() {
                   <span>Timeline</span>
                   <div className="flex-1 h-[1px] bg-border/60" />
                 </h2>
-                <div className="space-y-2">
-                  {[
-                    {
-                      year: "2014",
-                      description:
-                        "Started playing Minecraft, fascinated by redstone mechanics and command blocks",
-                      icon: <RiGamepadLine className="w-4 h-4" />,
-                      iconBg: "bg-emerald-500/20",
-                    },
-                    {
-                      year: "2016",
-                      description:
-                        "Joined school computer group, practiced typing and reached 200 CPM",
-                      icon: <RiKeyboardLine className="w-4 h-4" />,
-                      iconBg: "bg-blue-500/20",
-                    },
-                    {
-                      year: "2017",
-                      description:
-                        "Began learning programming with Python and basic Forge Modding",
-                      icon: <RiCodeSSlashLine className="w-4 h-4" />,
-                      iconBg: "bg-yellow-500/20",
-                    },
-                    {
-                      year: "2020",
-                      description:
-                        "Started exploring Java and Lua, attempted to build a TCP-based chat system",
-                      icon: <RiTerminalBoxLine className="w-4 h-4" />,
-                      iconBg: "bg-red-500/20",
-                    },
-                    {
-                      year: "2022",
-                      description:
-                        "Started learning Machine Learning basics and Full Stack Development",
-                      icon: <RiBrainLine className="w-4 h-4" />,
-                      iconBg: "bg-purple-500/20",
-                    },
-                    {
-                      year: "2023",
-                      description:
-                        "Launched Chat Nio (CoAI.Dev) and began commercial conversion",
-                      icon: <RiRocketLine className="w-4 h-4" />,
-                      iconBg: "bg-sky-500/20",
-                    },
-                    {
-                      year: "2024",
-                      description:
-                        "Achieved GitHub #1 trending, Chat Nio (CoAI.Dev) was acquired",
-                      icon: <RiGithubFill className="w-4 h-4" />,
-                      iconBg: "bg-slate-500/20",
-                    },
-                    {
-                      year: "2025",
-                      description:
-                        "GeekPark InnoForce 50 Super Developer of the Year",
-                      icon: <RiAwardLine className="w-4 h-4" />,
-                      iconBg: "bg-amber-500/20",
-                    },
-                  ].map((event, index) => (
-                    <div
-                      key={index}
-                      className="paper-card p-2 relative overflow-hidden group"
-                    >
-                      <div className="absolute top-0 left-0 w-1 h-full bg-primary/20 group-hover:bg-primary/40 transition-colors" />
-                      <div className="flex gap-2 items-center">
-                        <div className="text-sm font-medium text-primary/80 w-12 flex-shrink-0">
-                          {event.year}
+                <div className="space-y-6">
+                  <Timeline
+                    events={[
+                      {
+                        year: "2014",
+                        description:
+                          "Started playing Minecraft, fascinated by redstone mechanics and command blocks",
+                      },
+                      {
+                        year: "2016",
+                        description:
+                          "Joined school computer group, practiced typing and reached 200 CPM",
+                      },
+                      {
+                        year: "2017",
+                        description:
+                          "Began learning programming with Python and basic Forge Modding",
+                      },
+                      {
+                        year: "2020",
+                        description:
+                          "Started exploring Java and Lua, attempted to build a TCP-based chat system",
+                      },
+                      {
+                        year: "2022",
+                        description:
+                          "Started learning Machine Learning basics and Full Stack Development",
+                      },
+                      {
+                        year: "2023",
+                        description:
+                          "Launched Chat Nio (CoAI.Dev) and began commercial conversion",
+                      },
+                      {
+                        year: "2024",
+                        description:
+                          "Achieved GitHub #1 trending, Chat Nio (CoAI.Dev) was acquired",
+                      },
+                      {
+                        year: "2025",
+                        description:
+                          "GeekPark InnoForce 50 Super Developer of the Year",
+                      },
+                    ]}
+                  />
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                    {[
+                      {
+                        title: "China InnoForce 50",
+                        description: "Super Developer of the Year",
+                        detail: "GeekPark",
+                        year: "2025",
+                      },
+                      {
+                        title: "GitHub Trending",
+                        description: "#1 Repo Of The Day",
+                        detail: "CoAI.Dev",
+                        year: "2024",
+                      },
+                      {
+                        title: "Spark Lab S1",
+                        description: "Hackathon Champion",
+                        detail: "AI × Startup",
+                        year: "2024",
+                      },
+                    ].map((achievement, index) => (
+                      <div
+                        key={index}
+                        className="group px-2 py-1.5 shadow-sm hover:bg-muted/30 rounded-md transition-colors"
+                      >
+                        <div className="flex flex-col">
+                          <div className="flex items-center justify-between mb-0.5">
+                            <h3 className="text-xs font-medium text-foreground/90">
+                              {achievement.title}
+                            </h3>
+                            <span className="text-[10px] text-muted-foreground/60">
+                              {achievement.year}
+                            </span>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <span className="text-[10px] text-muted-foreground/80">
+                              {achievement.description}
+                            </span>
+                            <span className="text-[10px] text-muted-foreground/60">
+                              {achievement.detail}
+                            </span>
+                          </div>
                         </div>
-                        <div className={cn("p-1 rounded-md", event.iconBg)}>
-                          {event.icon}
-                        </div>
-                        <p className="text-xs text-muted-foreground">
-                          {event.description}
-                        </p>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </section>
             </div>
