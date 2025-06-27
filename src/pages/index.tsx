@@ -393,8 +393,8 @@ export default function Home() {
                         year: "2024",
                       },
                       {
-                        title: "Spark Lab S1",
-                        description: "Hackathon Champion",
+                        title: "Spark Lab",
+                        description: "Almuni & S1 Champion",
                         detail: "AI × Startup",
                         year: "2024",
                       },
