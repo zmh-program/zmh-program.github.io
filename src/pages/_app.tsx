@@ -24,10 +24,10 @@ export default function App({ Component, pageProps }: AppProps) {
           content="#000000"
           media="(prefers-color-scheme: dark)"
         />
-        <meta name="keywords" content="Kairo, ProgramZmh, LightXi" />
+        <meta name="keywords" content="Kairo, ProgramZmh, LightXi, CoAI.Dev" />
         <meta
           name="description"
-          content="Kairo (ProgramZmh) | Full Stack Developer & Entrepreneur | Founder of CoAI.Dev & Co-Founder of LightXi Inc | Passionate about innovation, creation, and turning ideas into reality"
+          content="Kairo (ProgramZmh) | Full Stack Developer & Entrepreneur | Founder of CoAI.Dev (Acquired) | Passionate about innovation, creation, and turning ideas into reality"
         />
       </Head>
       <Component {...pageProps} />

@@ -69,9 +69,9 @@ export default function Home() {
               <div className="flex items-center gap-2 w-fit mx-auto sm:mx-0">
                 <RiQuoteText className="w-3 h-3 text-foreground/60 flex-shrink-0" />
                 <Typing
-                  content="I've mastered nothing, yet code rhythm echoes for a lifetime."
+                  content="Relentless curiosity fuels all progress."
                   className="text-sm text-foreground/80"
-                  typingSpeed={50}
+                  typingSpeed={75}
                   keyboardSeed={2}
                   keyboardStay={2}
                 />
@@ -119,11 +119,11 @@ export default function Home() {
                     step of this programming adventure.
                   </p>
                   <p>
-                    Currently at LightXi Inc., I'm part of a great team working
-                    on LLM Infra solutions. I'm grateful for the opportunity to
-                    learn and tackle interesting challenges together. There's
-                    always something new to discover, and I'm excited to keep
-                    learning and improving.
+                    Today, I'm a full-stack dev & startup founder passionate
+                    about building innovative solutions. I founded CoAI.Dev
+                    (formerly Chat Nio), which was successfully acquired in
+                    2024. I believe in creating impactful technology while
+                    maintaining elegant simplicity.
                   </p>
                 </div>
               </section>
@@ -149,7 +149,7 @@ export default function Home() {
                 <div className="space-y-2.5">
                   <div className="paper-card h-[200px] select-none flex items-center justify-center overflow-hidden">
                     <TechStackCircles
-                      innerIcons={["go", "rust", "ts", "k8s"]}
+                      innerIcons={["go", "rust", "ts", "cpp"]}
                       outerIcons={[
                         "python",
                         "lua",
@@ -157,10 +157,10 @@ export default function Home() {
                         "react",
                         "next",
                         "vue",
-                        "nuxt",
+                        "c",
                         "pytorch",
                         "tensorflow",
-                        "cpp",
+                        "k8s",
                         "java",
                       ]}
                       innerRadius={60}
