@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 4%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 4%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 4%;
-    --primary: 240 6% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 240 6% 10%;
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 46%;
-    --accent: 240 5% 96%;
-    --accent-foreground: 240 6% 10%;
+    --background: 40 20% 94%;
+    --foreground: 30 10% 12%;
+    --card: 40 18% 96%;
+    --card-foreground: 30 10% 12%;
+    --popover: 40 18% 96%;
+    --popover-foreground: 30 10% 12%;
+    --primary: 30 8% 15%;
+    --primary-foreground: 40 20% 98%;
+    --secondary: 40 15% 91%;
+    --secondary-foreground: 30 8% 15%;
+    --muted: 40 15% 91%;
+    --muted-foreground: 30 6% 42%;
+    --accent: 40 15% 91%;
+    --accent-foreground: 30 8% 15%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 240 6% 10%;
+    --border: 40 12% 85%;
+    --input: 40 12% 85%;
+    --ring: 30 8% 15%;
     --radius: 0.5rem;
   }
 
@@ -56,6 +56,9 @@
   body {
     @apply bg-background text-foreground transition-colors duration-200;
   }
+  code, kbd, samp, pre {
+    font-family: inherit;
+  }
 }
 
 @layer components {
@@ -64,7 +67,7 @@
   }
 
   .minimal-card-hover {
-    @apply hover:border-muted-foreground/30 hover:shadow-sm;
+    @apply hover:border-muted-foreground/30 hover:shadow-md hover:shadow-amber-900/5 dark:hover:shadow-white/5;
   }
 
   .section-title {

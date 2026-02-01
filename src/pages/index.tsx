@@ -14,8 +14,8 @@ export default function Home() {
     <main className={cn(GeistSans.className, "min-h-screen bg-background")}>
       <ScrollArea className="w-full h-full">
         <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-primary/5 to-transparent rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-primary/5 to-transparent rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-amber-500/8 dark:from-primary/5 to-transparent rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-orange-400/6 dark:from-primary/5 to-transparent rounded-full blur-3xl" />
         </div>
         <div className="fixed bottom-4 right-4 z-50 sm:top-4 sm:right-4 sm:bottom-auto">
           <ThemeToggle />
@@ -27,7 +27,7 @@ export default function Home() {
                 <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
                   Kairo
                   <span className="block text-lg sm:text-xl font-normal text-muted-foreground mt-1">
-                    (aka. ProgramZmh)
+                    (aka. <span className="text-foreground">ProgramZmh</span>)
                   </span>
                 </h1>
                 <p className="text-sm text-muted-foreground">
@@ -87,9 +87,30 @@ export default function Home() {
                   <span className="text-[#cf222e] dark:text-[#ff7b72]">
                     let
                   </span>{" "}
+<<<<<<< HEAD
                   kairo ={" "}
                   <span className="text-[#0550ae] dark:text-[#79c0ff]">
                     Developer
+=======
+                  kairo:{" "}
+                  <span className="text-[#0550ae] dark:text-[#79c0ff]">
+                    Dev
+                  </span>
+                  {"<'"}
+                  <span className="text-[#0550ae] dark:text-[#79c0ff]">
+                    static
+                  </span>
+                  {", "}
+                  <span className="text-[#cf222e] dark:text-[#ff7b72]">
+                    impl
+                  </span>{" "}
+                  <span className="text-[#0550ae] dark:text-[#79c0ff]">
+                    Future
+                  </span>
+                  {"> = "}
+                  <span className="text-[#0550ae] dark:text-[#79c0ff]">
+                    Dev
+>>>>>>> 8624611 (feat: better ux design)
                   </span>{" "}
                   {"{"}
                   {"\n"}
@@ -159,9 +180,15 @@ export default function Home() {
                   </div>
                   <div className="flex flex-wrap gap-1.5">
                     {[
+<<<<<<< HEAD
                       { year: "'14", label: "Minecraft" },
                       { year: "'16", label: "Python" },
                       { year: "'17", label: "Java / Modding" },
+=======
+                      { year: "'16", label: "Minecraft" },
+                      { year: "'18", label: "Python" },
+                      { year: "'19", label: "Java / Modding" },
+>>>>>>> 8624611 (feat: better ux design)
                       { year: "'20", label: "Rust / C++" },
                       { year: "'22", label: "Full Stack" },
                       { year: "'23", label: "ML Basics" },

@@ -80,13 +80,23 @@ export function TechStackCircles({
   duration = 20,
 }: TechStackCirclesProps) {
   const [mounted, setMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
+    const checkMobile = () => setIsMobile(window.innerWidth < 640);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   const iconTheme = mounted && resolvedTheme === "light" ? "light" : "dark";
+  const scale = isMobile ? 0.7 : 1;
+  const actualInnerRadius = innerRadius * scale;
+  const actualOuterRadius = outerRadius * scale;
+  const actualInnerSize = isMobile ? "size-[18px]" : innerSize;
+  const actualOuterSize = isMobile ? "size-[26px]" : outerSize;
 
   return (
     <>
@@ -96,10 +106,10 @@ export function TechStackCircles({
       {innerIcons.map((icon, index) => (
         <OrbitingCircles
           key={index}
-          className={`${innerSize} border-none bg-transparent`}
+          className={`${actualInnerSize} border-none bg-transparent`}
           duration={duration}
           delay={(index * 100) / innerIcons.length}
-          radius={innerRadius}
+          radius={actualInnerRadius}
         >
           <img
             src={`https://skillicons.dev/icons?i=${icon}&theme=${iconTheme}`}
@@ -111,8 +121,8 @@ export function TechStackCircles({
       {outerIcons.map((icon, index) => (
         <OrbitingCircles
           key={index}
-          className={`${outerSize} border-none bg-transparent`}
-          radius={outerRadius}
+          className={`${actualOuterSize} border-none bg-transparent`}
+          radius={actualOuterRadius}
           duration={duration}
           delay={(index * 100) / outerIcons.length}
           reverse
