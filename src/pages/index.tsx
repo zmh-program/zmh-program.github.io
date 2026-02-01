@@ -25,7 +25,18 @@ export default function Home() {
             <div className="space-y-6">
               <div className="space-y-3">
                 <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-                  Kairo
+                  <div className="flex items-center gap-3 sm:block">
+                    <div className="sm:hidden w-9 h-9 border border-border overflow-hidden rounded-sm shrink-0">
+                      <Image
+                        width={36}
+                        height={36}
+                        src="/avatar.webp"
+                        alt="avatar"
+                        className="object-cover contrast-[1.1] saturate-[0.8]"
+                      />
+                    </div>
+                    <span>Kairo</span>
+                  </div>
                   <span className="block text-lg sm:text-xl font-normal text-muted-foreground mt-1">
                     (aka. <span className="text-foreground">ProgramZmh</span>)
                   </span>
@@ -80,7 +91,7 @@ export default function Home() {
               <pre
                 className={cn(
                   GeistMono.className,
-                  "text-[13px] leading-relaxed",
+                  "text-[13px] leading-relaxed whitespace-pre-wrap break-all",
                 )}
               >
                 <code className="block text-[#24292f] dark:text-[#c9d1d9]">
@@ -141,7 +152,7 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-              <div className="absolute top-5 right-5 w-12 h-12 border border-border overflow-hidden rounded-sm">
+              <div className="absolute top-5 right-5 w-12 h-12 border border-border overflow-hidden rounded-sm hidden sm:block">
                 <Image
                   fill
                   src="/avatar.webp"
