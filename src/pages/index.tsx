@@ -89,7 +89,7 @@ export default function Home() {
                   </span>{" "}
                   kairo:{" "}
                   <span className="text-[#0550ae] dark:text-[#79c0ff]">
-                    Developer
+                    Dev
                   </span>
                   {"<'"}
                   <span className="text-[#0550ae] dark:text-[#79c0ff]">
@@ -104,7 +104,7 @@ export default function Home() {
                   </span>
                   {"> = "}
                   <span className="text-[#0550ae] dark:text-[#79c0ff]">
-                    Developer
+                    Dev
                   </span>{" "}
                   {"{"}
                   {"\n"}
@@ -174,15 +174,9 @@ export default function Home() {
                   </div>
                   <div className="flex flex-wrap gap-1.5">
                     {[
-<<<<<<< HEAD
-                      { year: "'14", label: "Minecraft" },
-                      { year: "'16", label: "Python" },
-                      { year: "'17", label: "Java / Modding" },
-=======
                       { year: "'16", label: "Minecraft" },
                       { year: "'18", label: "Python" },
                       { year: "'19", label: "Java / Modding" },
->>>>>>> 8624611 (feat: better ux design)
                       { year: "'20", label: "Rust / C++" },
                       { year: "'22", label: "Full Stack" },
                       { year: "'23", label: "ML Basics" },
