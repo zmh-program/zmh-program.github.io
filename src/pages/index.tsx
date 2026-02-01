@@ -1,153 +1,187 @@
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import Image from "next/image";
-import {
-  RiArrowRightLine,
-  RiArrowRightUpBoxFill,
-  RiQuoteText,
-  RiGamepadLine,
-  RiKeyboardLine,
-  RiCodeSSlashLine,
-  RiTerminalBoxLine,
-  RiBrainLine,
-  RiRocketLine,
-  RiGithubFill,
-  RiAwardLine,
-} from "@remixicon/react";
+import { RiArrowRightUpBoxFill } from "@remixicon/react";
 import { Typing } from "@/components/typing";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { TechStackCircles } from "@/components/orbiting-circles";
-import { PaperGrid } from "@/components/ui/paper-grid";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { Timeline } from "@/components/timeline";
 
 export default function Home() {
   return (
-    <main
-      className={cn(
-        GeistMono.className,
-        "min-h-screen bg-background tracking-tighter",
-      )}
-    >
+    <main className={cn(GeistSans.className, "min-h-screen bg-background")}>
       <ScrollArea className="w-full h-full">
-        <PaperGrid
-          className="fixed inset-0 z-0 pointer-events-none"
-          gridSize={16}
-          gridColor="hsla(var(--border) / 0.45)"
-        />
+        <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-primary/5 to-transparent rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-primary/5 to-transparent rounded-full blur-3xl" />
+        </div>
         <div className="fixed bottom-4 right-4 z-50 sm:top-4 sm:right-4 sm:bottom-auto">
           <ThemeToggle />
         </div>
-        <div className="w-full max-w-3xl mx-auto px-4 py-8 sm:py-12">
-          <div className="paper-card p-4 sm:p-8 space-y-6 sm:space-y-8">
-            <header className="space-y-4">
-              <div className="flex flex-col sm:flex-row items-center sm:items-start sm:justify-between gap-4 sm:gap-0">
-                <div className="space-y-2 text-center sm:text-left">
-                  <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-                    Kairo
-                    <span className="block sm:inline text-sm sm:text-base font-normal text-muted-foreground sm:ml-2">
-                      (aka. ProgramZmh)
-                    </span>
-                  </h1>
-                  <p className="text-sm text-muted-foreground">
-                    16 y.o. / 2024 InnoForce 50 / Full Stack Dev / Founder
-                    CoAI.Dev (Acquired)
-                  </p>
-                </div>
-                <div className="relative w-20 h-20 rounded-md overflow-hidden ring-1 ring-border/50">
-                  <Image
-                    fill
-                    src="/avatar.webp"
-                    alt="avatar"
-                    className="object-cover"
-                  />
-                </div>
+        <div className="w-full max-w-5xl mx-auto px-4 py-8 sm:py-16 space-y-12">
+          <header className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <div className="space-y-6">
+              <div className="space-y-3">
+                <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
+                  Kairo
+                  <span className="block text-lg sm:text-xl font-normal text-muted-foreground mt-1">
+                    (aka. ProgramZmh)
+                  </span>
+                </h1>
+                <p className="text-sm text-muted-foreground">
+                  16 y.o. / 2024 InnoForce 50 / Full Stack Dev / Founder
+                  CoAI.Dev (Acquired)
+                </p>
               </div>
 
-              <div className="flex items-center gap-2 w-fit mx-auto sm:mx-0">
-                <RiQuoteText className="w-3 h-3 text-foreground/60 flex-shrink-0" />
-                <Typing
-                  content="Relentless curiosity fuels all progress."
-                  className="text-sm text-foreground/80"
-                  typingSpeed={75}
-                  keyboardSeed={2}
-                  keyboardStay={2}
+              <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+                <Link
+                  href="https://github.com/zmh-program"
+                  target="_blank"
+                  className="underline underline-offset-2 hover:text-foreground transition-colors"
+                >
+                  GitHub
+                </Link>
+                <Link
+                  href="https://x.com/programzmh"
+                  target="_blank"
+                  className="underline underline-offset-2 hover:text-foreground transition-colors"
+                >
+                  X (Twitter)
+                </Link>
+                <Link
+                  href="mailto:zmh@lightxi.com"
+                  target="_blank"
+                  className="underline underline-offset-2 hover:text-foreground transition-colors"
+                >
+                  Mail
+                </Link>
+              </div>
+            </div>
+
+            <div className="border border-border p-5 relative overflow-hidden bg-muted/30">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="flex gap-1.5">
+                  <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
+                </div>
+                <span
+                  className={cn(
+                    GeistMono.className,
+                    "text-[10px] text-muted-foreground/70 dark:text-muted-foreground/40 ml-1",
+                  )}
+                >
+                  kairo.rs
+                </span>
+              </div>
+              <pre
+                className={cn(
+                  GeistMono.className,
+                  "text-[13px] leading-relaxed",
+                )}
+              >
+                <code className="block text-[#24292f] dark:text-[#c9d1d9]">
+                  <span className="text-[#cf222e] dark:text-[#ff7b72]">
+                    let
+                  </span>{" "}
+                  kairo ={" "}
+                  <span className="text-[#0550ae] dark:text-[#79c0ff]">
+                    Developer
+                  </span>{" "}
+                  {"{"}
+                  {"\n"}
+                  {"    "}name:{" "}
+                  <span className="text-[#0a3069] dark:text-[#a5d6ff]">
+                    "Kairo"
+                  </span>
+                  ,{"\n"}
+                  {"    "}age:{" "}
+                  <span className="text-[#0550ae] dark:text-[#79c0ff]">16</span>
+                  ,{"\n"}
+                  {"    "}role:{" "}
+                  <span className="text-[#0a3069] dark:text-[#a5d6ff]">
+                    "Full Stack"
+                  </span>
+                  ,{"\n"}
+                  {"    "}passion:{" "}
+                  <span className="text-[#6e7781] dark:text-[#6e7681]">|</span>
+                </code>
+              </pre>
+              <div className="ml-4 mt-1 border border-border/60 bg-background/80 px-2 py-1 w-fit text-xs">
+                <div
+                  className={cn(
+                    GeistMono.className,
+                    "text-muted-foreground/70 flex items-center gap-1.5",
+                  )}
+                >
+                  <span className="relative w-2.5 h-2.5 rounded-full overflow-hidden">
+                    <span className="absolute inset-[-50%] bg-[conic-gradient(from_0deg,#fff,#a855f7,#fff)] animate-[gradient-spin_2s_linear_infinite]" />
+                    <span className="absolute inset-[1px] rounded-full bg-background/80" />
+                  </span>
+                  <span className="text-[#0a3069] dark:text-[#a5d6ff]">
+                    "Building things"
+                  </span>
+                </div>
+              </div>
+              <div className="absolute top-5 right-5 w-12 h-12 border border-border overflow-hidden rounded-sm">
+                <Image
+                  fill
+                  src="/avatar.webp"
+                  alt="avatar"
+                  className="object-cover contrast-[1.1] saturate-[0.8]"
                 />
               </div>
+            </div>
+          </header>
 
-              <div className="flex flex-wrap justify-center sm:justify-start items-center gap-1.5">
-                <Link href="https://github.com/zmh-program" target="_blank">
-                  <img
-                    src="https://img.shields.io/badge/-zmh--program-black?labelColor=black&logo=github&logoColor=white"
-                    alt="GitHub"
-                  />
-                </Link>
-                <Link href="https://x.com/programzmh" target="_blank">
-                  <img
-                    src="https://img.shields.io/badge/-ProgramZmh-black?labelColor=black&logo=x&logoColor=white"
-                    alt="X (Twitter)"
-                  />
-                </Link>
-                <Link href="mailto:zmh@lightxi.com" target="_blank">
-                  <img
-                    src="https://img.shields.io/badge/-zmh@lightxi.com-black?labelColor=black&logo=gmail&logoColor=white"
-                    alt="Email"
-                  />
-                </Link>
+          <div className="space-y-12">
+            <section>
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="section-title flex-1">About & Tech</h2>
               </div>
-            </header>
-
-            <div className="space-y-6 sm:space-y-8">
-              <section>
-                <h2
-                  className={cn(
-                    GeistSans.className,
-                    "text-sm font-normal tracking-normal mb-4 flex items-center gap-2",
-                  )}
-                >
-                  <span>About Me</span>
-                  <div className="flex-1 h-[1px] bg-border/60" />
-                </h2>
-                <div className="space-y-4 text-sm text-muted-foreground">
-                  <p>
-                    My coding journey started when I was 8, developing Minecraft
-                    Forge mods. It was fascinating to see how code could bring
-                    ideas to life, and that curiosity has stayed with me ever
-                    since. While I'm still learning and growing, I enjoy every
-                    step of this programming adventure.
-                  </p>
-                  <p>
-                    Today, I'm a full-stack dev & startup founder passionate
-                    about building innovative solutions. I founded CoAI.Dev
-                    (formerly Chat Nio), which was successfully acquired in
-                    2024. I believe in creating impactful technology while
-                    maintaining elegant simplicity.
-                  </p>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div className="border border-border p-5">
+                  <h3 className="text-sm font-medium mb-3">About Me</h3>
+                  <div className="space-y-3 text-sm text-muted-foreground mb-4">
+                    <p>
+                      My coding journey started when I was 8, developing
+                      Minecraft Forge mods. It was fascinating to see how code
+                      could bring ideas to life.
+                    </p>
+                    <p>
+                      Today, I'm a full-stack dev & startup founder. I founded
+                      CoAI.Dev (formerly Chat Nio), which was successfully
+                      acquired in 2024.
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      { year: "'14", label: "Minecraft" },
+                      { year: "'16", label: "Python" },
+                      { year: "'17", label: "Java / Modding" },
+                      { year: "'20", label: "Rust / C++" },
+                      { year: "'22", label: "Full Stack" },
+                      { year: "'23", label: "ML Basics" },
+                      { year: "'23", label: "Chat Nio" },
+                      { year: "'24", label: "Acquired" },
+                    ].map((item, i) => (
+                      <span
+                        key={i}
+                        className="inline-flex items-center gap-1 px-2 py-0.5 text-xs border border-border text-muted-foreground"
+                      >
+                        <span className="font-medium text-foreground/70">
+                          {item.year}
+                        </span>
+                        {item.label}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </section>
-
-              <section>
-                <h2
-                  className={cn(
-                    GeistSans.className,
-                    "text-sm font-normal tracking-normal mb-4 flex items-center gap-2",
-                  )}
-                >
-                  <span>Tech Stack</span>
-                  <div className="flex-1 h-[1px] bg-border/60" />
-                  <a
-                    href="https://gitroll.io/profile/u8Lxle2WApghkWm7A0ylMCYH2tYx2/stacks"
-                    target="_blank"
-                    className="text-xs text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 group"
-                  >
-                    GitRoll
-                    <RiArrowRightUpBoxFill className="w-3.5 h-3.5 text-muted-foreground/60 group-hover:text-primary/80 transition-colors" />
-                  </a>
-                </h2>
-                <div className="space-y-2.5">
-                  <div className="paper-card h-[200px] select-none flex items-center justify-center overflow-hidden">
+                <div className="border border-border p-5 relative overflow-hidden min-h-[240px] select-none">
+                  <div className="absolute inset-0 flex items-center justify-center opacity-85">
                     <TechStackCircles
                       innerIcons={["go", "rust", "ts", "cpp"]}
                       outerIcons={[
@@ -163,273 +197,82 @@ export default function Home() {
                         "k8s",
                         "java",
                       ]}
-                      innerRadius={60}
-                      outerRadius={140}
-                      innerSize="size-[25px]"
-                      outerSize="size-[40px]"
+                      innerRadius={55}
+                      outerRadius={110}
+                      innerSize="size-[22px]"
+                      outerSize="size-[34px]"
                       duration={20}
                     />
                   </div>
-                  <div className="flex flex-row flex-wrap items-center gap-2 justify-center">
-                    <p className="text-center text-sm text-muted-foreground">
-                      8 years journey (since 2017)
-                    </p>
+                  <div className="relative z-10 flex items-center justify-between">
+                    <h3 className="text-sm font-medium">Tech Stack</h3>
+                    <a
+                      href="https://gitroll.io/profile/u8Lxle2WApghkWm7A0ylMCYH2tYx2/stacks"
+                      target="_blank"
+                      className="text-xs text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
+                    >
+                      GitRoll
+                      <RiArrowRightUpBoxFill className="w-3 h-3" />
+                    </a>
+                  </div>
+                  <p className="absolute bottom-5 right-5 text-xs text-muted-foreground z-10">
+                    8 years journey
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <div className="lg:col-span-2">
+                  <h2 className="section-title mb-4">Project Experience</h2>
+                  <div className="overflow-hidden h-[180px]">
+                    <img
+                      src="https://algora.io/og/user/zmh-program"
+                      alt="Algora Profile"
+                      className="w-full h-auto"
+                    />
                   </div>
                 </div>
-              </section>
-
-              <section>
-                <h2
-                  className={cn(
-                    GeistSans.className,
-                    "text-sm font-normal tracking-normal mb-4 flex items-center gap-2",
-                  )}
-                >
-                  <span>Project Experience</span>
-                  <div className="flex-1 h-[1px] bg-border/60" />
-                  <a
-                    href="https://github.com/zmh-program"
-                    target="_blank"
-                    className="text-xs text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 group"
-                  >
-                    GitHub
-                    <RiArrowRightUpBoxFill className="w-3.5 h-3.5 text-muted-foreground/60 group-hover:text-primary/80 transition-colors" />
-                  </a>
-                </h2>
-                <div className="grid gap-1">
-                  {[
-                    {
-                      title: "CoAI.Dev",
-                      description:
-                        "🚀 Next Generation AI One-Stop Internationalization Solution.",
-                      role: "Founder",
-                      tags: ["K8s", "Go", "React", "TypeScript", "WebSocket"],
-                      link: "https://coai.dev",
-                      stars: "8k+",
-                      sold: true,
-                    },
-                    {
-                      title: "Next Whois UI",
-                      description:
-                        "🧪 Your Next-Gen Whois Lookup Tool With Modern UI. Support Domain/IPv4/IPv6/ASN/CIDR Whois Lookup And Powerful Features.",
-                      role: "Author",
-                      tags: ["Next.js", "TypeScript", "Whois Lookup"],
-                      link: "https://github.com/zmh-program/next-whois-ui",
-                      stars: "0.4k",
-                    },
-                    {
-                      title: "Fyrrum Start",
-                      description:
-                        "🍏 AI-powered beautiful and lightweight start page. Features cloud sync, PWA offline access, and various components.",
-                      role: "Author",
-                      tags: ["Go", "Vue", "PWA", "Service Worker"],
-                      link: "https://github.com/zmh-program/fystart",
-                      stars: "0.1k",
-                    },
-                  ].map((project, index) => (
-                    <Link
-                      key={index}
-                      href={project.link}
-                      target="_blank"
-                      className="group py-2 border-b border-border/60 border-dashed last:border-0 hover:translate-y-[-1px] transition-all duration-300"
-                    >
-                      <div className="flex flex-col sm:flex-row items-start justify-between gap-2">
-                        <div className="space-y-1.5 w-full">
-                          <div className="flex flex-col gap-1">
-                            <div className="flex items-center gap-2">
-                              <h3 className="text-base font-medium">
-                                {project.title}
-                              </h3>
-                              {project.stars && (
-                                <span className="text-[11px] text-muted-foreground">
-                                  ⭐ {project.stars}
-                                </span>
-                              )}
-                              {project.sold && (
-                                <span className="text-[11px] text-primary">
-                                  Acquired
-                                </span>
-                              )}
-                            </div>
-                            <p className="text-xs text-muted-foreground leading-relaxed">
-                              {project.description}
-                            </p>
-                          </div>
-                          <div className="flex flex-wrap items-center gap-1">
-                            <span className="text-xs text-primary font-medium">
-                              # {project.role}
-                            </span>
-                            <span className="px-1.5 py-0.5 text-xs text-muted-foreground">
-                              {project.tags.join(" · ")}
-                            </span>
-                          </div>
-                        </div>
-                        <RiArrowRightLine className="w-3.5 h-3.5 text-muted-foreground/60 group-hover:text-primary/80 transition-colors shrink-0 mt-1 hidden sm:block" />
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </section>
-
-              <section>
-                <h2
-                  className={cn(
-                    GeistSans.className,
-                    "text-sm font-normal tracking-normal mb-4 flex items-center gap-2",
-                  )}
-                >
-                  <span>Partners</span>
-                  <div className="flex-1 h-[1px] bg-border/60" />
-                </h2>
-                <div className="space-y-2">
-                  {[
-                    {
-                      name: "Sh1n3zZ",
-                      logo: "/sh1n3zz.webp",
-                      description: "BGP Player / Full Stack / Embedded / OIer",
-                      url: "https://github.com/sh1n3zz",
-                    },
-                  ].map((partner, index) => (
-                    <Link
-                      key={index}
-                      href={partner.url}
-                      target="_blank"
-                      className="group block"
-                    >
-                      <div className="flex items-center space-x-2 transition-colors">
-                        <div className="relative w-8 h-8 rounded-full overflow-hidden ring-1 ring-border/50">
-                          <Image
-                            fill
-                            src={partner.logo}
-                            alt={`${partner.name} logo`}
-                            className="object-cover"
-                          />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2">
-                            <h3 className="text-base font-medium truncate">
-                              {partner.name}
-                            </h3>
-                            <RiArrowRightLine className="w-3.5 h-3.5 text-muted-foreground/60 group-hover:text-primary/80 transition-colors" />
-                          </div>
-                          <p className="text-sm text-muted-foreground truncate break-words whitespace-pre-wrap">
-                            {partner.description}
-                          </p>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </section>
-
-              <section>
-                <h2
-                  className={cn(
-                    GeistSans.className,
-                    "text-sm font-normal tracking-normal mb-4 flex items-center gap-2",
-                  )}
-                >
-                  <span>Timeline</span>
-                  <div className="flex-1 h-[1px] bg-border/60" />
-                </h2>
-                <div className="space-y-6">
-                  <Timeline
-                    events={[
-                      {
-                        year: "2014",
-                        description:
-                          "Started playing Minecraft, fascinated by redstone mechanics and command blocks",
-                      },
-                      {
-                        year: "2016",
-                        description:
-                          "Joined school computer group, practiced typing and reached 200 CPM",
-                      },
-                      {
-                        year: "2017",
-                        description:
-                          "Began learning programming with Python and basic Forge Modding",
-                      },
-                      {
-                        year: "2020",
-                        description:
-                          "Started exploring Java and Lua, attempted to build a TCP-based chat system",
-                      },
-                      {
-                        year: "2022",
-                        description:
-                          "Started learning Machine Learning basics and Full Stack Development",
-                      },
-                      {
-                        year: "2023",
-                        description:
-                          "Launched Chat Nio (CoAI.Dev) and began commercial conversion",
-                      },
-                      {
-                        year: "2024",
-                        description:
-                          "Achieved GitHub #1 trending, Chat Nio (CoAI.Dev) was acquired",
-                      },
-                      {
-                        year: "2025",
-                        description:
-                          "GeekPark InnoForce 50 Super Developer of the Year",
-                      },
-                    ]}
-                  />
-
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <div>
+                  <h2 className="section-title mb-4">Achievements</h2>
+                  <div className="space-y-2">
                     {[
                       {
                         title: "China InnoForce 50",
-                        description: "Super Developer of the Year",
-                        detail: "GeekPark",
+                        desc: "Super Developer of the Year",
                         year: "2025",
                       },
                       {
                         title: "GitHub Trending",
-                        description: "#1 Repo Of The Day",
-                        detail: "CoAI.Dev",
+                        desc: "#1 Repo Of The Day",
                         year: "2024",
                       },
                       {
                         title: "Spark Lab",
-                        description: "Almuni & S1 Champion",
-                        detail: "AI × Startup",
+                        desc: "Alumni & S1 Champion",
                         year: "2024",
                       },
-                    ].map((achievement, index) => (
-                      <div
-                        key={index}
-                        className="group px-2 py-1.5 shadow-sm hover:bg-muted/30 rounded-md transition-colors"
-                      >
-                        <div className="flex flex-col">
-                          <div className="flex items-center justify-between mb-0.5">
-                            <h3 className="text-xs font-medium text-foreground/90">
-                              {achievement.title}
-                            </h3>
-                            <span className="text-[10px] text-muted-foreground/60">
-                              {achievement.year}
-                            </span>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <span className="text-[10px] text-muted-foreground/80">
-                              {achievement.description}
-                            </span>
-                            <span className="text-[10px] text-muted-foreground/60">
-                              {achievement.detail}
-                            </span>
-                          </div>
+                    ].map((a, i) => (
+                      <div key={i} className="py-1.5">
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm font-medium">{a.title}</span>
+                          <span className="text-xs text-muted-foreground">
+                            {a.year}
+                          </span>
                         </div>
+                        <span className="text-xs text-muted-foreground">
+                          {a.desc}
+                        </span>
                       </div>
                     ))}
                   </div>
                 </div>
-              </section>
-            </div>
+              </div>
+            </section>
           </div>
 
-          <footer className="mt-8 text-center text-sm text-muted-foreground">
+          <footer className="pt-2 text-center text-xs text-muted-foreground">
             © 2021-present @Kairo. All rights reserved.
           </footer>
         </div>

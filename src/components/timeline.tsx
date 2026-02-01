@@ -12,23 +12,17 @@ interface TimelineProps {
 
 export function Timeline({ events, className }: TimelineProps) {
   return (
-    <div className={cn("relative space-y-0", className)}>
-      <div className="absolute top-0 left-[3.25rem] w-[1px] h-full bg-border/60" />
+    <div className={cn("relative", className)}>
+      <div className="absolute top-0 left-8 w-px h-full bg-border" />
       {events.map((event, index) => (
         <div
           key={index}
-          className="group relative flex gap-4 items-center py-2 hover:bg-muted/50 rounded-md transition-all duration-300 px-1.5"
+          className="group relative flex gap-3 items-center py-1.5 hover:bg-muted/50 rounded-md transition-colors px-1"
         >
-          <div className="text-sm font-medium text-primary/80 w-12 flex-shrink-0 relative z-10 cursor-default">
+          <div className="text-xs font-medium text-muted-foreground w-7 flex-shrink-0 relative z-10">
             {event.year}
           </div>
-          <div
-            className="absolute left-[3.25rem] w-[1px] h-full bg-gradient-to-b from-transparent via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            style={{
-              transform: "translateX(-50%)",
-            }}
-          />
-          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+          <p className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">
             {event.description}
           </p>
         </div>

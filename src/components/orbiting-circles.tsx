@@ -1,4 +1,6 @@
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export interface OrbitingCirclesProps {
   className?: string;
@@ -77,6 +79,15 @@ export function TechStackCircles({
   outerSize = "size-[50px]",
   duration = 20,
 }: TechStackCirclesProps) {
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const iconTheme = mounted && resolvedTheme === "light" ? "light" : "dark";
+
   return (
     <>
       <span className="pointer-events-none text-4xl font-semibold text-foreground/5">
@@ -91,7 +102,7 @@ export function TechStackCircles({
           radius={innerRadius}
         >
           <img
-            src={`https://skillicons.dev/icons?i=${icon}`}
+            src={`https://skillicons.dev/icons?i=${icon}&theme=${iconTheme}`}
             alt={`${icon} Icon`}
             className="w-full h-full object-contain"
           />
@@ -107,7 +118,7 @@ export function TechStackCircles({
           reverse
         >
           <img
-            src={`https://skillicons.dev/icons?i=${icon}`}
+            src={`https://skillicons.dev/icons?i=${icon}&theme=${iconTheme}`}
             alt={`${icon} Icon`}
             className="w-full h-full object-contain"
           />
