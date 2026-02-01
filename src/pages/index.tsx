@@ -87,14 +87,9 @@ export default function Home() {
                   <span className="text-[#cf222e] dark:text-[#ff7b72]">
                     let
                   </span>{" "}
-<<<<<<< HEAD
-                  kairo ={" "}
-                  <span className="text-[#0550ae] dark:text-[#79c0ff]">
-                    Developer
-=======
                   kairo:{" "}
                   <span className="text-[#0550ae] dark:text-[#79c0ff]">
-                    Dev
+                    Developer
                   </span>
                   {"<'"}
                   <span className="text-[#0550ae] dark:text-[#79c0ff]">
@@ -109,8 +104,7 @@ export default function Home() {
                   </span>
                   {"> = "}
                   <span className="text-[#0550ae] dark:text-[#79c0ff]">
-                    Dev
->>>>>>> 8624611 (feat: better ux design)
+                    Developer
                   </span>{" "}
                   {"{"}
                   {"\n"}
